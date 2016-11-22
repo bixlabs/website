@@ -1,8 +1,8 @@
 <?php
-    
-    
-    
-    
+
+
+
+
 if(!$_POST) exit;
 
 // Email address verification, do not edit.
@@ -16,29 +16,29 @@ $name     = $_POST['name'];
 $email    = $_POST['email'];
 $message = $_POST['message'];
 $phone = $_POST['phone'];
-    
+
 $test = $_POST['upl'];
-   
-    
-    
-    
+
+
+
+
    // echo  "*** " . $test . " ***";
-    
-    
+
+
    // var_dump($_POST);
    // var_dump($_FILES);
-    
+
 $name_of_uploaded_file =
     basename($_FILES['upl']['name']);
-    
+
     //get the file extension of the file
  //   $type_of_uploaded_file =
  //   substr($name_of_uploaded_file,
   //         strrpos($name_of_uploaded_file, '.') + 1);
-    
+
     //$size_of_uploaded_file =
     //$_FILES["upl"]["size"]/1024;//size in KBs
-    
+
    //echo  "*** " . $name_of_uploaded_file . " ***";
 if(trim($name) == '') {
   echo '<div class="notification error clearfix"><p><strong>Attention!</strong> You must enter your name.</p></div>';
@@ -92,7 +92,7 @@ $headers .= "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
 $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
-if(mail($address, $e_subject, $msg, $headers)) {
+if(@mail($address, $e_subject, $msg, $headers)) {
 
   // Email has sent successfully, echo a success page.
 
@@ -101,9 +101,13 @@ if(mail($address, $e_subject, $msg, $headers)) {
   echo "<div class='notification success clearfix'><p>Thank you for getting in touch, <strong>$name</strong>.</p></div>";
   echo "</div>";
   echo "</fieldset>";*/
-  header("Location: contact.html");
-    exit();
-} else {
 
-  echo '<p>An error ocurred. Please try again later.</p>';
+  echo json_encode(array(
+      "success" => true
+  ));
+
+} else {
+  echo json_encode(array(
+      "success" => false
+  ));
 }

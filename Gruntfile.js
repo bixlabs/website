@@ -71,6 +71,23 @@ module.exports = function(grunt) {
       }
     },
 
+    htmlmin: {
+      dist: {
+        options: {
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          collapseBooleanAttributes: true,
+          removeComments: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'dist',
+          src: ['*.html'],
+          dest: 'dist'
+        }]
+      }
+    },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -103,6 +120,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-filerev');
 
   // Default task.
@@ -115,7 +133,8 @@ module.exports = function(grunt) {
     'cssmin:generated',
     'copy:dist',
     'filerev',
-    'usemin'
+    'usemin',
+    'htmlmin'
   ]);
 
 };

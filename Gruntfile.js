@@ -36,7 +36,6 @@ module.exports = function(grunt) {
             '*.php',
             'img/{,*/}*.*',
             'fonts/{,*/}*.*',
-            'css/{,*/}*.*',
             'video/{,*/}*.*'
           ]
         }]
@@ -47,13 +46,28 @@ module.exports = function(grunt) {
     usemin: {
       html: ['dist/{,*/}*.html'],
       js: ['dist/js/{,*/}*.js'],
+      css: ['dist/css/{,*/}*.css'],
       options: {
         assetsDirs: [
-          'dist'
+          'dist',
+          'dist/img',
+          'dist/css'
         ],
         patterns: {
-          js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
+          js: [[/(img\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
         }
+      }
+    },
+
+    // Renames files for browser caching purposes
+    filerev: {
+      dist: {
+        src: [
+          'dist/js/{,*/}*.js',
+          'dist/css/{,*/}*.css',
+          'dist/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          'dist/fonts/*'
+        ]
       }
     },
 
@@ -88,6 +102,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-filerev');
 
   // Default task.
   grunt.registerTask('default', [
@@ -96,7 +112,9 @@ module.exports = function(grunt) {
     'useminPrepare',
     'concat:generated',
     'uglify:generated',
+    'cssmin:generated',
     'copy:dist',
+    'filerev',
     'usemin'
   ]);
 

@@ -16,21 +16,47 @@ module.exports = function(grunt) {
         }]
       }
     },
+
     // Task configuration.
     useminPrepare: {
-      html: 'app/index.html',
+      html: ['app/{,*/}*.html']
+    },
+
+    // Copies remaining files to places other tasks can use
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: 'app',
+          dest: 'dist',
+          src: [
+            '*.{ico,png,txt}',
+            '*.html',
+            '*.php',
+            'img/{,*/}*.*',
+            'fonts/{,*/}*.*',
+            'css/{,*/}*.*',
+            'video/{,*/}*.*'
+          ]
+        }]
+      }
+    },
+
+    // Performs rewrites based on filerev and the useminPrepare configuration
+    usemin: {
+      html: ['dist/{,*/}*.html'],
+      js: ['dist/js/{,*/}*.js'],
       options: {
-        dest: 'dist',
-        flow: {
-          html: {
-            steps: {
-              js: ['concat', 'uglifyjs']
-            },
-            post: {}
-          }
+        assetsDirs: [
+          'dist'
+        ],
+        patterns: {
+          js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
         }
       }
     },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -61,6 +87,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task.
   grunt.registerTask('default', [
@@ -68,7 +95,9 @@ module.exports = function(grunt) {
     'jshint',
     'useminPrepare',
     'concat:generated',
-    'uglify:generated'
+    'uglify:generated',
+    'copy:dist',
+    'usemin'
   ]);
 
 };

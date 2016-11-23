@@ -41,15 +41,10 @@
   /*wow ==============================================*/
 
   if($(window).width() >= 1100){
-    var wow = new WOW(
-    {
+    var wow = new WOW({
       animateClass: 'animated',
-      offset: 100,
-      callback:function(box) {
-        console.log('WOW: animating <' + box.tagName.toLowerCase() + '>');
-      }
-    }
-    );
+      offset: 100
+    });
     wow.init();
   }
 
@@ -191,7 +186,7 @@
 
     var currentTimeString = currentHours + ':' + currentMinutes + ' ' + timeOfDay;
 
-    $('#clock').html(currentTimeString);
+    $('#clock3').html(currentTimeString);
 
     //TEXAS
     currentTime = printTime('-7');
@@ -204,7 +199,7 @@
     currentHours = ( currentHours === 0 ) ? 12 : currentHours;
     currentTimeString = currentHours + ':' + currentMinutes + ' ' + timeOfDay;
 
-    $('#clock2').html(currentTimeString);
+    $('#clock4').html(currentTimeString);
 
     function printTime(offset) {
       offset++;
@@ -218,12 +213,95 @@
    setInterval(updateClock, 1000);
   });
 
+  /*form success message =========================================*/
+  $(document).ready(function () {
+
+    $('#contactform').on('submit', function (e) {
+      e.preventDefault();
+      $.ajax({
+        type     : 'POST',
+        cache    : false,
+        url      : $(this).attr('action'),
+        data     : $(this).serialize(),
+        success  : function(data) {
+          data = JSON.parse(data);
+          if (data.success) {
+            $('.form-error').hide();
+            $('.contact-success').fadeIn();
+          } else {
+            $('.form-error').show();
+          }
+        }
+      });
+    });
+
+    // Hide contact success message
+    $('body').on('click', '.contact-success', function() {
+      $(this).fadeOut();
+    });
+  });
+
   /*resoluciones ios ==============================================*/
 
   var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
   if(IS_IPHONE) {
     $('.conjunto').addClass('ios-device');
+    $('.talent').addClass('iosdeviceintro');
+    $('.conjuntoboton2, .centro a').addClass('iosdevicewidth');
   }
+
+  /*google maps ==============================================*/
+  function initialize() {
+    var mapCanvas = document.getElementById('map-canvas');
+    var mapOptions = {
+      center: new google.maps.LatLng(-34.916004, -56.154339100000016),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    //map marker
+    var myLatlng = new google.maps.LatLng(-34.916004, -56.154339100000016);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Bixlabs!'
+    });
+  }
+
+  function initialize2() {
+    var mapCanvas2 = document.getElementById('map-canvas2');
+    var mapOptions2 = {
+      center: new google.maps.LatLng(29.753536, -95.365771),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map2 = new google.maps.Map(mapCanvas2, mapOptions2);
+    //map marker
+    var myLatlng2 = new google.maps.LatLng(29.753536, -95.365771);
+    var marker2 = new google.maps.Marker({
+      position: myLatlng2,
+      map: map2,
+      title: 'bixlabs'
+    });
+  }
+
+  if ($('#map-canvas').length) {
+    google.maps.event.addDomListener(window, 'load', initialize2);
+    google.maps.event.addDomListener(window, 'load', initialize);
+  }
+
+  /*blur ==============================================*/
+  $(window).on('scroll', function () {
+    var pixs = $(document).scrollTop();
+    pixs = pixs / 100;
+    $('.intro').css({'-webkit-filter': 'blur(' + pixs + 'px)','filter': 'blur(' + pixs + 'px)'});
+  });
+
+  /*portfolio ==============================================*/
+  $(function(){
+    // Instantiate MixItUp:
+    $('#Container').mixItUp();
+  });
 
   /**
    * File Upload

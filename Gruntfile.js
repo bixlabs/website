@@ -16,38 +16,19 @@ module.exports = function(grunt) {
         }]
       }
     },
-    // Metadata.
-    pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> */\n',
     // Task configuration.
-    concat: {
+    useminPrepare: {
+      html: 'app/index.html',
       options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['app/js/**/*.js', '!app/js/vendor/**/*.js'],
-        dest: 'dist/scripts.js'
-      },
-      vendor: {
-        src: ['app/js/vendor/**/*.js'],
-        dest: 'dist/vendor.js'
-      }
-    },
-    uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
-      dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/scripts.min.js'
-      },
-      vendor: {
-        src: '<%= concat.vendor.dest %>',
-        dest: 'dist/vendor.min.js'
+        dest: 'dist',
+        flow: {
+          html: {
+            steps: {
+              js: ['concat', 'uglifyjs']
+            },
+            post: {}
+          }
+        }
       }
     },
     jshint: {
@@ -57,21 +38,24 @@ module.exports = function(grunt) {
       },
       all: {
         src: [
-          'Gruntfile.js',
           'app/js/{,*/}*.js',
           '!app/js/vendor/{,*/}*.js'
         ]
+      },
+      gruntfile: {
+        src: 'Gruntfile.js'
       }
     },
     watch: {
       gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
+        files: 'Gruntfile.js',
         tasks: ['jshint:gruntfile']
       }
     }
   });
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -82,8 +66,9 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'clean:dist',
     'jshint',
-    'concat',
-    'uglify'
+    'useminPrepare',
+    'concat:generated',
+    'uglify:generated'
   ]);
 
 };

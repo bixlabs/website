@@ -3,20 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Bixlabs provides top-notch software development from Latin America that promotes social change. Experts in Swift, Angular and Node." />
-  <meta name="keywords" content="latin american developers, top app developers in latin america, best software developers latin america, mobile developers in latin america" /> 
+  <meta name="keywords" content="latin american developers, top app developers in latin america, best software developers latin america, mobile developers in latin america" />
   <title>Bixlabs: Top app developers in Latin America. Experts in Swift, Angular and Node</title>
-  
+
   <link rel="stylesheet" href="css/hover.css" media="all">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,900" rel="stylesheet">
   <link rel="stylesheet" href="css/site.css">
-  <link rel="icon" href="img/Fav_Icon.gif" type="image/x-icon" />  
+  <link rel="icon" href="img/Fav_Icon.gif" type="image/x-icon" />
   <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]--> 
- <script src="js/modernizr.custom.js"></script>
+  <![endif]-->
+ <script src="js/vendor/modernizr.custom.js"></script>
  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/retina.js/1.0.1/retina.js"></script>-->
 <script>
 /*loading progress bar ==============================================*/
@@ -29,7 +29,7 @@
 			img = document.images,
 			c = 0;
 			tot = img.length;
-	
+
 		function imgLoaded(){
 		  c += 1;
 		  var perc = ((100/tot*c) << 0) +"%";
@@ -39,7 +39,7 @@
 		}
 		function doneLoading(){
 		  ovrl.style.opacity = 0;
-		  setTimeout(function(){ 
+		  setTimeout(function(){
 			ovrl.style.display = "none";
 		  }, 1200);
 		}
@@ -48,11 +48,11 @@
 		  tImg.onload  = imgLoaded;
 		  tImg.onerror = imgLoaded;
 		  tImg.src     = img[i].src;
-		}    
+		}
 	  }
 	  document.addEventListener('DOMContentLoaded', loadbar, false);
 	}());
-	
+
 	 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -71,7 +71,7 @@
         <div id="progstat"></div>
         <div id="progress"></div>
       </div>
-<!-- ______________ M E N U  ________________ 
+<!-- ______________ M E N U  ________________
 <div class="barrita">
     <p>info@bixlabs.com </p>
 </div>-->
@@ -91,7 +91,7 @@
             <img src="img/bitmap.png" alt="sobre">
             <a href="contact.html" class="talkcolor">Contact Us</a>
             </li>
-        </ul> 
+        </ul>
         <div id="pull">
           <span></span>
           <span></span>
@@ -125,9 +125,9 @@
     <div class="vacio"></div>
 </section>
 
-<!-- ______________ V I D E O  ________________ 
+<!-- ______________ V I D E O  ________________
 <section class="video videowho" id="home">
- 
+
      <div class="introtext" style="display:flex;justify-content:center;align-items:center;">
          <div class="conjunto" >
             <p class="titulohome aboutitulo">WE DESIGN FOR THE LIFE</p>
@@ -135,10 +135,10 @@
             <p class="subtitulo aboutsubtitulo">We let our commitment to always become better shine through.</p>
             <div class="vacio"></div>
         </div>
-    </div> 
+    </div>
 </section>-->
 
-<!-- ______________  M O D E L O S    D E    N E G O C I O S  ________________ 
+<!-- ______________  M O D E L O S    D E    N E G O C I O S  ________________
 <section class="separadorgris alturaseparador negocios">
     <article class="centro" style="display:flex;justify-content:center;align-items:center;">
     	<div class="subconjunto">
@@ -163,10 +163,10 @@
     	<p class="subtitulohome wow fadeInUp">Our people</p>
         <h1 class="howh1 wow fadeInUp">OUR TEAM</h1>
     </div>
-    
+
     <!--<img src="img/icon-10-years@2x.png" alt="icon 10" class=" wow fadeInUp years">
     <p class="detalle  wow fadeInUp" data-wow-delay="0.35s">We have more than 10 years experience in custom software and design.</p>-->
-    
+
     <div class="team  wow fadeInUp">
         <ul class="ch-grid">
             <li>
@@ -441,12 +441,12 @@
             </ul>
             <p><i><b>Are we close to you? </b></i><a href="contact.html" class="link">  Contact us</a></p>
         </div>
-    
+
     </article>
     <div class="vacio"></div>
 </section>
 
- <!-- ______________ C I N T A    G R I S  ________________ 
+ <!-- ______________ C I N T A    G R I S  ________________
 <section class="comun how mundo">
     <div class="centradocomun">
         <div class="triplete anchounico">
@@ -477,11 +477,11 @@
              <div class="vacio"></div>
         </div>
     </div>
-    
+
 </section>-->
 
- 
- <!-- ______________ C A L L     T O    A C T I O N ________________ 
+
+ <!-- ______________ C A L L     T O    A C T I O N ________________
  <section class="calling" style="display:flex;justify-content:center;align-items:center;">
     	<div>
  			<h3 class="llamado wow fadeInUp " >OUR TEAM, OUR THOUGHTS, OUR CULTURE</h3>
@@ -492,8 +492,8 @@
             </form>
         </div>
  </section>S
- 
- 
+
+
   <!-- ______________ F O O T E R ________________ -->
 <footer>
 	<div class="contenidofoot">
@@ -512,42 +512,42 @@
             <a href="https://www.linkedin.com/company/bixlabs" target="_blank"><img src="img/linked-i-n@2x.png" alt="linkedin"></a>
         </div>
     </div>
-    
+
     <div class="underline"></div>
     <img src="img/logo-bix-labs-avatar-negro@2x.png" alt="logo bixlabs" class="bix">
     <p class="copyright">COPYRIGHT © 2016 BIXLABS</p>
-    
-</footer> 
+
+</footer>
 
 
  <!-- ______________ U P  ________________ -->
-<section class="upicon "> 
+<section class="upicon ">
     <a href="#top" id="bottomm" class="scroll up ">
         <img src="img/up.png" alt="up" title="up icon" />
     </a>
 </section>
-        
-        
-         
-<!-- ______________ S C R I P T S  ________________ -->  
+
+
+
+<!-- ______________ S C R I P T S  ________________ -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/wow.js"></script>
+<script src="js/vendor/wow.js"></script>
 <script>
 
 /*menu ==============================================*/
 if($(window).width() >= 731){
-	$(window).scroll(function() { 
+	$(window).scroll(function() {
 		if ($(window).scrollTop() > 100 ){
 			$('header, nav').addClass('show');
 			$('.menup li a').addClass('grey');
 			$('.logocont').addClass('logocont2');
 	  } else {
-			$('header, nav').removeClass('show'); 
+			$('header, nav').removeClass('show');
 			$('.menup li a').removeClass('grey');
 			$('.logocont').removeClass('logocont2');
-		}; 
+		};
 	});
-	$('.scroll').on('click', function(e){		
+	$('.scroll').on('click', function(e){
 			e.preventDefault()
 	  $('html, body').animate({
 		  scrollTop : $(this.hash).offset().top
@@ -566,7 +566,7 @@ wow = new WOW(
 	}
   }
 );
-wow.init(); 
+wow.init();
 }
 
 /*menu ==============================================*/
@@ -592,7 +592,7 @@ if($(window).width() >= 1100){
 		var $window = $(window),
 			$mainMenuBar = $('#myM'),
 			$mainMenuBarAnchor = $('#mainMenuBarAnchor');
-	
+
 		$window.scroll(function() {
 			var window_top = $window.scrollTop();
 			var div_top = $mainMenuBarAnchor.offset().top;
@@ -634,14 +634,14 @@ $(function() {
 $(window).on('scroll', function () {
     var pixs = $(document).scrollTop()
     pixs = pixs / 100;
-    $(".intro").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" })     
+    $(".intro").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" })
 });
 /*resoluciones ios ==============================================*/
-var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null; 
+var IS_IPHONE = navigator.userAgent.match(/iPhone/i) != null;
 if(IS_IPHONE)
 {
 	$('.talent').addClass('iosdeviceintro');
-} 
+}
 </script>
 
 </body>

@@ -1,3 +1,5 @@
+dist/
+
 # Compiled source #
 ###################
 *.com
@@ -55,7 +57,7 @@ node_modules/
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
- 
+
 # track these files, if they exist
 !.gitignore
 !.editorconfig

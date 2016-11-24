@@ -103,10 +103,38 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       }
     },
+
+    connect: {
+      server: {
+        options: {
+          port: 9000,
+          base: 'app',
+          livereload: 35729
+        }
+      }
+    },
+
     watch: {
       gruntfile: {
         files: 'Gruntfile.js',
         tasks: ['jshint:gruntfile']
+      },
+      js: {
+        files: ['app/js/{,*/,**/}*.{js,json}'],
+        tasks: ['jshint:all'],
+        options: {
+          livereload: '<%= connect.server.options.livereload %>'
+        }
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.server.options.livereload %>'
+        },
+        files: [
+          'app/{,*/,**/}*.html',
+          'app/css/{,*/}*.css',
+          'app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+        ]
       }
     }
   });
@@ -121,6 +149,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-filerev');
 
   // Default task.
@@ -135,6 +164,12 @@ module.exports = function(grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('serve', [
+    'jshint',
+    'connect',
+    'watch'
   ]);
 
 };

@@ -218,6 +218,7 @@
 
     $('#contactform').on('submit', function (e) {
       e.preventDefault();
+
       $.ajax({
         type     : 'POST',
         cache    : false,
@@ -228,6 +229,7 @@
           if (data.success) {
             $('.form-error').hide();
             $('.contact-success').fadeIn();
+            $(this).closest('form').find('input[type=text], textarea').val('');
           } else {
             $('.form-error').show();
           }

@@ -154,6 +154,10 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', [
+    'build',
+  ]);
+
+  grunt.registerTask('build', [
     'clean:dist',
     'jshint',
     'useminPrepare',

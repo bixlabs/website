@@ -26,6 +26,21 @@ Una vez levantado el servidor, podemos acceder via:
 http://localhost:9000/
 ```
 
+### Staging Server
+Antes de subir a producción vamos a verificar que todo esté andando bien en un servidor staging:
+
+```
+$ npm run heroku
+```
+
+Este script genererá un build y subirá el proyecto a Heroku. Verificamos el sitio en 
+
+```
+https://bix-website.herokuapp.com
+```
+
+En caso de ser la primera vez que corremos el script, él mismo nos dará la información para clonar el repo.
+
 ### Build
 Cuando todo esté listo para subir a producción podemos generar un build del proyecto simplemente corriendo:
 

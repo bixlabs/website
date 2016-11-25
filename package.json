@@ -26,6 +26,7 @@
   },
   "scripts": {
     "grunt": "grunt",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "heroku": "./deploy-heroku.sh"
   }
 }

@@ -187,9 +187,11 @@
     $('#contactform').on('submit', function (e) {
       e.preventDefault();
       var $form = $(this);
+      var $button = $form.find('.send');
       var $buttonText = $form.find('.send span');
       var $buttonLoader = $form.find('.send .loading');
 
+      $button.prop('disabled', true);
       $buttonLoader.show();
       $buttonText.hide();
 
@@ -200,6 +202,7 @@
         data     : $(this).serialize(),
         success  : function(data) {
           data = JSON.parse(data);
+          $button.prop('disabled', false);
           $buttonLoader.hide();
           $buttonText.show();
           if (data.success) {

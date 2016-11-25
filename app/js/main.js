@@ -170,43 +170,11 @@
 
   /*clock ==============================================*/
   function updateClock () {
-    var workDate = new Date(),
-        UTCDate = new Date();
-    UTCDate.setTime(workDate.getTime()+workDate.getTimezoneOffset()*60000);
+    var timeTexas = moment().tz('America/Chicago').format('h:mm a');
+    var timeUruguay = moment().tz('America/Montevideo').format('h:mm a');
 
-    //UY
-    var currentTime = printTime('-4');
-    var currentHours = currentTime.getHours ( );
-    var currentMinutes = currentTime.getMinutes ( );
-
-    currentMinutes = ( currentMinutes < 10 ? '0' : '' ) + currentMinutes;
-    var timeOfDay = ( currentHours < 12 ) ? 'AM' : 'PM';
-    currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-    currentHours = ( currentHours === 0 ) ? 12 : currentHours;
-
-    var currentTimeString = currentHours + ':' + currentMinutes + ' ' + timeOfDay;
-
-    $('#clock3').html(currentTimeString);
-
-    //TEXAS
-    currentTime = printTime('-7');
-    currentHours = currentTime.getHours ( );
-    currentMinutes = currentTime.getMinutes ( );
-
-    currentMinutes = ( currentMinutes < 10 ? '0' : '' ) + currentMinutes;
-    timeOfDay = ( currentHours < 12 ) ? 'AM' : 'PM';
-    currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-    currentHours = ( currentHours === 0 ) ? 12 : currentHours;
-    currentTimeString = currentHours + ':' + currentMinutes + ' ' + timeOfDay;
-
-    $('#clock4').html(currentTimeString);
-
-    function printTime(offset) {
-      offset++;
-      var tempDate = new Date();
-      tempDate.setTime(UTCDate.getTime()+3600000*(offset));
-      return tempDate;
-    }
+    $('#clock3').html(timeTexas);
+    $('#clock4').html(timeUruguay);
   }
 
   $(document).ready(function () {

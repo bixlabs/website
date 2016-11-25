@@ -103,13 +103,13 @@
             <p class="city">Montevideo, URUGUAY</p>
             <p class="office">HEADQUARTERS</p>
             <p class="phonedire">Phone: +598 99 226 488<br>Jaime Zudañez 2721</p>
-            <div class="combotime"><div class="time">Local time: <div id="clock3"> </div></div></div>
+            <div class="combotime"><div class="time">Local time: <div class="local-time" id="clock3"> </div></div></div>
             <div id="map-canvas"></div>
           </div>
            <div class="mapas mapdos">
             <p class="city">Houston, TEXAS, USA </p>
             <p class="phonedire">Phone: +1 (888) 624-9522<br>1301 Fannin St #2440</p>
-            <div class="combotime"><div class="time space">Local time: <div id="clock4"></div></div></div>
+            <div class="combotime"><div class="time space">Local time: <div class="local-time" id="clock4"></div></div></div>
             <div id="map-canvas2" ></div>
            </div>
         </div>
@@ -160,6 +160,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVGiubXdq9Nl4A5WjgKTiEBthEmYh6OAI"></script>
 
     <!-- build:js js/vendor/vendor.js-->
+    <!-- bower:js -->
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
+    <!-- endbower -->
     <script src="js/vendor/wow.js"></script>
     <script src="js/vendor/jssor.slider-21.1.6.min.js"></script>
     <script src="js/vendor/owl.carousel.js"></script>

@@ -55,6 +55,7 @@
   "globals": {
     "$": false,
     "WOW": false,
-    "google": false
+    "google": false,
+    "moment": false
   }
 }

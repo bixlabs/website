@@ -2242,8 +2242,11 @@ canvas {
     float: right
 }
 .time {
-    width: 150px;
+    width: 160px;
     float: right;
+}
+.local-time {
+  text-transform: uppercase;
 }
 .formulario {
     float: left;

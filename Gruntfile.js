@@ -110,12 +110,25 @@ module.exports = function(grunt) {
           port: 9000,
           base: 'app',
           livereload: 35729,
-          hostname: '0.0.0.0'
+          hostname: '0.0.0.0',
+          middleware: function(connect) {
+            return [
+              connect().use(
+                '/bower_components',
+                connect.static('./bower_components')
+              ),
+              connect.static('app')
+            ];
+          }
         }
       }
     },
 
     watch: {
+      bower: {
+        files: ['bower.json'],
+        tasks: ['wiredep']
+      },
       gruntfile: {
         files: 'Gruntfile.js',
         tasks: ['jshint:gruntfile']
@@ -137,11 +150,20 @@ module.exports = function(grunt) {
           'app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
+    },
+
+    // Automatically inject Bower components into the app
+    wiredep: {
+      app: {
+        src: ['app/*.html']
+      }
     }
+
   });
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-usemin');
+  grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -161,6 +183,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'jshint',
+    'wiredep',
     'useminPrepare',
     'concat:generated',
     'uglify:generated',
@@ -173,6 +196,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('serve', [
     'jshint',
+    'wiredep',
     'connect',
     'watch'
   ]);

@@ -17,7 +17,7 @@ $email    = $_POST['email'];
 $message = $_POST['message'];
 $phone = $_POST['phone'];
 
-$test = $_POST['upl'];
+//$test = $_POST['upl'];
 
 
 
@@ -28,8 +28,8 @@ $test = $_POST['upl'];
    // var_dump($_POST);
    // var_dump($_FILES);
 
-$name_of_uploaded_file =
-    basename($_FILES['upl']['name']);
+//$name_of_uploaded_file =
+//    basename($_FILES['upl']['name']);
 
     //get the file extension of the file
  //   $type_of_uploaded_file =
@@ -92,21 +92,20 @@ $headers .= "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
 $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
-if(@mail($address, $e_subject, $msg, $headers)) {
+try {
+  if(mail($address, $e_subject, $msg, $headers)) {
+    echo json_encode(array(
+        "success" => true
+    ));
+  } else {
+    error_log("Error: Could not send mail");
+    echo json_encode(array(
+      "success" => false
+    ));
+  }
 
-  // Email has sent successfully, echo a success page.
-
- /* echo "<fieldset>";
-  echo "<div id='success_page'>";
-  echo "<div class='notification success clearfix'><p>Thank you for getting in touch, <strong>$name</strong>.</p></div>";
-  echo "</div>";
-  echo "</fieldset>";*/
-
-  echo json_encode(array(
-      "success" => true
-  ));
-
-} else {
+} catch (Exception $e) {
+  error_log("Error handled: " . $e->getMessage());
   echo json_encode(array(
       "success" => false
   ));

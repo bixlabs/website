@@ -186,6 +186,12 @@
 
     $('#contactform').on('submit', function (e) {
       e.preventDefault();
+      var $form = $(this);
+      var $buttonText = $form.find('.send span');
+      var $buttonLoader = $form.find('.send .loading');
+
+      $buttonLoader.show();
+      $buttonText.hide();
 
       $.ajax({
         type     : 'POST',
@@ -194,10 +200,12 @@
         data     : $(this).serialize(),
         success  : function(data) {
           data = JSON.parse(data);
+          $buttonLoader.hide();
+          $buttonText.show();
           if (data.success) {
             $('.form-error').hide();
             $('.contact-success').fadeIn();
-            $(this).closest('form').find('input[type=text], textarea').val('');
+            $form.find('input[type=text], textarea').val('');
           } else {
             $('.form-error').show();
           }

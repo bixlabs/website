@@ -204,7 +204,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('serve', [
     'jshint',
-    'wiredep',
     'connect',
     'watch'
   ]);

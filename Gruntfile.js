@@ -59,6 +59,17 @@ module.exports = function(grunt) {
       }
     },
 
+    //imagemin: {
+    //  dist: {
+    //    files: [{
+    //      expand: true,
+    //       cwd: 'app/img',
+    //       src: '{,*/}*.{png,jpg,jpeg,gif}',
+    //       dest: 'dist/img'
+    //     }]
+    //   }
+    // },
+
     // Renames files for browser caching purposes
     filerev: {
       dist: {
@@ -173,7 +184,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  // grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-filerev');
+  // grunt.loadNpmTasks('grunt-newer');
 
   // Default task.
   grunt.registerTask('default', [

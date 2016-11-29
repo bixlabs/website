@@ -155,15 +155,7 @@ module.exports = function(grunt) {
     // Automatically inject Bower components into the app
     wiredep: {
       app: {
-        src: ['app/*.html'],
-        overrides: {
-          'moment': {
-            'main': ['moment.js']
-          },
-          'moment-timezone': {
-            'main': ['builds/moment-timezone-with-data-2010-2020.js']
-          }
-        }
+        src: ['app/*.html']
       }
     }
 
@@ -204,6 +196,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('serve', [
     'jshint',
+    'wiredep',
     'connect',
     'watch'
   ]);

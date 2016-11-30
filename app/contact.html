@@ -76,73 +76,101 @@
         </div>-->
       </div>
     </section>
-    <!-- ______________ F O R M ________________ -->
-    <section class="contactform">
-      <div class="contenedor">
-      	<div class="formulario">
-          <form name="contactform" id="contactform" action="post.php" method="post" >
-            <input type="text" id="name" name="name"  placeholder="* Hey, what's your name?" required>
-            <input type="text" id="email" name="email"  placeholder="* What's your mail?" required>
-            <input type="text" id="phone" name="phone"   placeholder="And your phone?">
-            <!--<div id="upload" method="post" action="upload.php" enctype="multipart/form-data">
-              <div id="drop">
-                <p>Got a brief? Drag and drop here</p>
-                <a>or look for it</a>
-                <input type="file" name="upl" multiple />
+   
+<!-- ______________ F O R M ________________ -->
+<section class="contactform">
+    <div class="contenedor">
+    	<div class="formulario f1">
+        
+            <form name="contactform" id="contactform" action="post.php" method="post" >
+              <input type="text" id="name" name="name"  placeholder="* Hey, what's your name?" required>
+              <input type="text" id="email" name="email"  placeholder="* What's your mail?" required>
+              <input type="text" id="phone" name="phone"   placeholder="Company name">
+
+             <div id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+                    <div id="drop">
+                        <p>Got a brief? Drag and drop here</p>
+                        <a>or look for it</a>
+                        <input type="file" name="upl" multiple />
+                    </div>
+                    <ul>
+                        <!-- The file uploads-->
+                    </ul>
               </div>
-              <ul>
-                  <!-- The file uploads
-              </ul>
-            </div>-->
-            <textarea id="message" name="message" placeholder="* Leave us a message" required></textarea>
-            <button type="submit" class="send"><div class="loading"></div><span>Send</span></button>
-          </form>
-          <p class="required">* Required</p>
-          <p class="form-error">An error occured. <span>Please, try again later.</span></p>
+
+            </form>
+            
+            
+ 
         </div>
+        <div class="formulario f2">
+            <form name="contactform" id="contactform2" action="post.php" method="post" >
+            <input type="text" id="site" name="site"   placeholder="Website">
+             <select name="project">
+             <option value="type">Project type</option>
+              <option value="Android">Android</option>
+              <option value="iOS">iOS</option>
+              <option value="Web">Web</option>
+            </select>
+              <textarea id="message" name="message" placeholder="* Leave us a message" required></textarea>
+            </form>
+            
+        </div>
+        <div class="vacio"></div>
+        <div class="inputsgroup">
+        	<input type="submit" value="SEND" class="send">
+            <p class="required">* Required</p>
+        </div>
+            <p class="form-error">An error occured. <span>Please, try again later.</span></p>
+        
         <div class="dires">
-        	<div class="mapas">
-            <p class="city">Montevideo, URUGUAY</p>
-            <p class="office">HEADQUARTERS</p>
-            <p class="phonedire">Phone: +598 99 226 488<br>Jaime Zudañez 2721</p>
-            <div class="combotime"><div class="time">Local time: <div class="local-time" id="clock3"> </div></div></div>
-            <div id="map-canvas"></div>
-          </div>
-           <div class="mapas mapdos">
-            <p class="city">Houston, TEXAS, USA </p>
-            <p class="phonedire">Phone: +1 (888) 624-9522<br>1301 Fannin St #2440</p>
-            <div class="combotime"><div class="time space">Local time: <div class="local-time" id="clock4"></div></div></div>
-            <div id="map-canvas2" ></div>
-           </div>
+        	<div class="mapas map1">
+                <div class="infodire direusa">
+                    <p class="city">Montevideo, URUGUAY</p>
+                    <p class="office">HEADQUARTERS</p>
+                    <p class="phonedire">
+                        Phone: +598 99 226 488
+                        <br>Jaime Zudañez 2721
+                    </p>
+                     <div class="combotime"><div class="time">Local time: <div id="clock4"></div></div></div>
+                 </div>
+                <div id="map-canvas"></div>
+             </div>
+             <div class="mapas map2">
+                 <div class="infodire direusa">
+                    <p class="city">Houston, TEXAS, USA </p>
+                    <p class="phonedire">
+                        Phone: +1 (888) 624-9522
+                        <br>1301 Fannin St #2440
+                    </p>
+                    <div class="combotime"><div class="time space">Local time: <div id="clock3"></div></div></div>
+                </div>
+                <div id="map-canvas2" ></div>
+             </div>
         </div>
-      </div>
-      <div class="vacio"></div>
-    </section>
-    <!-- ______________ F O O T E R ________________ -->
-    <footer>
-      <div class="contenidofoot">
-      	<div class="mail">
-          <img src="img/sobreverde1@2x.png" alt="sobre">
-          <p>info@bixlabs.com</p>
+
+    </div>
+    <div class="vacio"></div>
+</section>
+<!-- ______________ F O O T E R ________________ -->
+<footer>
+	<div class="contenidofoot eqi-container">
+    <div class="centradovertical">
+  		<p class="copyright">COPYRIGHT © 2016 BIXLABS</p>
+       <div class="contenedorredes">
+            <div class="redes">
+                <a href="https://www.instagram.com/bixlabsteam/" target="_blank"><img src="img/instagram-circle@2x.png" alt="instagram"></a>
+                <a href="https://twitter.com/bixlabsteam" target="_blank"><img src="img/twitter@2x.png" alt="twitter"></a>
+                <a href="https://www.facebook.com/bixlabsteam" target="_blank"><img src="img/facebook@2x.png" alt="facebook"></a>
+                <a href="https://github.com/bixlabs" target="_blank"><img src="img/github@2x.png" alt="github"></a>
+                <a href="https://www.youtube.com/channel/UCDyxIw_6LFVqW3ACUz7eI_A" target="_blank"><img src="img/group-3@2x.png" alt="youtube"></a>
+                <a href="https://www.linkedin.com/company/bix-solutions" target="_blank"><img src="img/linked-i-n@2x.png" alt="linkedin"></a>
+            </div>
         </div>
-        <div class="phonenumber">
-          <p>Phone +1 (888) 624-9522 </p>
-          <p>Uruguay  +598 99 226 488</p>
+        <p class="mailto">info@bixlabs.com</p>
         </div>
-        <p class="description">Follow us:</p>
-        <div class="redes">
-          <a href="https://www.instagram.com/bixlabsteam/" target="_blank"><img src="img/instagram-circle@2x.png" alt="instagram"></a>
-          <a href="https://twitter.com/bixlabsteam" target="_blank"><img src="img/twitter@2x.png" alt="twitter"></a>
-          <a href="https://www.facebook.com/bixlabsteam" target="_blank"><img src="img/facebook@2x.png" alt="facebook"></a>
-          <a href="https://github.com/bixlabs" target="_blank"><img src="img/github@2x.png" alt="github"></a>
-          <a href="https://www.youtube.com/channel/UCDyxIw_6LFVqW3ACUz7eI_A" target="_blank"><img src="img/group-3@2x.png" alt="youtube"></a>
-          <a href="https://www.linkedin.com/company/bixlabs" target="_blank"><img src="img/linked-i-n@2x.png" alt="linkedin"></a>
-        </div>
-      </div>
-      <div class="underline"></div>
-      <img src="img/logo-bix-labs-avatar-negro@2x.png" alt="logo bixlabs" class="bix">
-      <p class="copyright">COPYRIGHT © 2016 BIXLABS</p>
-    </footer>
+    </div>
+</footer> 
     <!-- ______________ U P  ________________ -->
     <section class="upicon ">
       <a href="#top" id="bottomm" class="scroll up ">
@@ -153,8 +181,12 @@
     <div class="contact-success">
       <div class="content">
         <h2>Message Sent!</h2>
-        <p>Thank you for sending us a message. You'll hear from us very soon.</p>
-        <p>Click anywhere to close</p>
+        <p>We'll get in touch with you soon, and talk about your project, goals, and how we can work together.</p>
+        <p>Click anywhere to exit.</p>
+        
+        
+
+
       </div>
     </div>
 

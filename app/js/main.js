@@ -271,12 +271,12 @@
     google.maps.event.addDomListener(window, 'load', initialize);
   }
 
-  /*blur ==============================================*/
+  /*blur ==============================================
   $(window).on('scroll', function () {
     var pixs = $(document).scrollTop();
     pixs = pixs / 100;
     $('.intro').css({'-webkit-filter': 'blur(' + pixs + 'px)','filter': 'blur(' + pixs + 'px)'});
-  });
+  });*/
 
   /*portfolio ==============================================*/
   $(function(){

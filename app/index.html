@@ -11,11 +11,7 @@
 
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,900" rel="stylesheet">
-
-    <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="css/main.css?__inline=true">
 
 
     <!--[if IE]>
@@ -280,7 +276,7 @@
             <p class="mailto">info@bixlabs.com</p>
             </div>
         </div>
-    </footer> 
+    </footer>
     <!-- ______________ U P  ________________ -->
     <section class="upicon ">
       <a href="#top" id="bottomm" class="scroll up ">
@@ -313,10 +309,15 @@
     </div>
     <div class="md-overlay"></div>-->
 
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,900" rel="stylesheet">
+    <!-- build:css(app) css/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVGiubXdq9Nl4A5WjgKTiEBthEmYh6OAI"></script>
 
-    <!-- build:js js/vendor/vendor.js-->
+    <!-- build:js(app) js/vendor/vendor.js-->
     <!-- bower:js -->
     <script src="../bower_components/moment/moment.js"></script>
     <script src="../bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
@@ -333,7 +334,7 @@
     <script src="js/vendor/jquery.mixitup.min.js"></script>
     <!-- endbuild -->
 
-    <!-- build:js js/main.js-->
+    <!-- build:js(app) js/main.js-->
     <script src="js/main.js"></script>
     <!-- endbuild -->
 

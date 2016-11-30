@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
     // Task configuration.
     useminPrepare: {
-      html: ['app/{,*/}*.html']
+      html: ['.tmp/index.html', 'app/{,*/}*.html', '!app/index.html']
     },
 
     // Copies remaining files to places other tasks can use
@@ -33,10 +33,20 @@ module.exports = function(grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
+            '!index.html',
             '*.php',
             'img/{,*/}*.*',
             'fonts/{,*/}*.*',
             'video/{,*/}*.*'
+          ]
+        },
+        {
+          expand: true,
+          flatten: true,
+          cwd: '.tmp',
+          dest: 'dist',
+          src: [
+            'index.html',
           ]
         }]
       }
@@ -168,6 +178,16 @@ module.exports = function(grunt) {
       app: {
         src: ['app/*.html']
       }
+    },
+
+    inline: {
+      dist: {
+        options:{
+          cssmin: true
+        },
+        src: 'app/index.html',
+        dest: '.tmp/index.html'
+      }
     }
 
   });
@@ -184,6 +204,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-inline');
   // grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-filerev');
   // grunt.loadNpmTasks('grunt-newer');
@@ -197,6 +218,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'jshint',
     'wiredep',
+    'inline',
     'useminPrepare',
     'concat:generated',
     'uglify:generated',

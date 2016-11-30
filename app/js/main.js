@@ -173,8 +173,8 @@
     var timeTexas = moment().tz('America/Chicago').format('h:mm a');
     var timeUruguay = moment().tz('America/Montevideo').format('h:mm a');
 
-    $('#clock3, #clock').html(timeUruguay);
-    $('#clock4, #clock2').html(timeTexas);
+    $('#clock4, #clock').html(timeUruguay);
+    $('#clock3, #clock2').html(timeTexas);
   }
 
   $(document).ready(function () {

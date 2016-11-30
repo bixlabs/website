@@ -75,75 +75,66 @@
 <!-- ______________ F O R M ________________ -->
 <section class="contactform">
     <div class="contenedor">
-    	<div class="formulario f1">
+      <form name="contactform" id="contactform" action="post.php" method="post" >
+      	<div class="formulario f1">
 
-            <form name="contactform" id="contactform" action="post.php" method="post" >
-              <input type="text" id="name" name="name"  placeholder="* Hey, what's your name?" required>
-              <input type="text" id="email" name="email"  placeholder="* What's your mail?" required>
-              <input type="text" id="phone" name="phone"   placeholder="Company name">
-
-             <div id="upload" method="post" action="upload.php" enctype="multipart/form-data">
-                    <div id="drop">
-                        <p>Got a brief? Drag and drop here</p>
-                        <a>or look for it</a>
-                        <input type="file" name="upl" multiple />
-                    </div>
-                    <ul>
-                        <!-- The file uploads-->
-                    </ul>
+            <input type="text" id="name" name="name"  placeholder="* Hey, what's your name?" required>
+            <input type="text" id="email" name="email"  placeholder="* What's your mail?" required>
+            <input type="text" id="phone" name="phone"   placeholder="Company name">
+            <div id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+              <div id="drop">
+                <p>Got a brief? Drag and drop here</p>
+                <a>or look for it</a>
+                <input type="file" name="upl" multiple />
               </div>
-
-            </form>
-
-
+              <ul>
+                  <!-- The file uploads-->
+              </ul>
+            </div>
 
         </div>
         <div class="formulario f2">
-            <form name="contactform" id="contactform2" action="post.php" method="post" >
-            <input type="text" id="site" name="site"   placeholder="Website">
-             <select name="project">
-             <option value="type">Project type</option>
-              <option value="Android">Android</option>
-              <option value="iOS">iOS</option>
-              <option value="Web">Web</option>
-            </select>
-              <textarea id="message" name="message" placeholder="* Leave us a message" required></textarea>
-            </form>
-
+          <input type="text" id="site" name="site"   placeholder="Website">
+          <select name="project">
+            <option value="type">Project type</option>
+            <option value="Android">Android</option>
+            <option value="iOS">iOS</option>
+            <option value="Web">Web</option>
+          </select>
+          <textarea id="message" name="message" placeholder="* Leave us a message" required></textarea>
         </div>
         <div class="vacio"></div>
         <div class="inputsgroup">
         	<input type="submit" value="SEND" class="send">
-            <p class="required">* Required</p>
+          <p class="required">* Required</p>
         </div>
-            <p class="form-error">An error occured. <span>Please, try again later.</span></p>
-
-        <div class="dires">
-        	<div class="mapas map1">
-                <div class="infodire direusa">
-                    <p class="city">Montevideo, URUGUAY</p>
-                    <p class="office">HEADQUARTERS</p>
-                    <p class="phonedire">
-                        Phone: +598 99 226 488
-                        <br>Jaime Zudañez 2721
-                    </p>
-                     <div class="combotime"><div class="time">Local time: <div id="clock4"></div></div></div>
-                 </div>
-                <div id="map-canvas"></div>
-             </div>
-             <div class="mapas map2">
-                 <div class="infodire direusa">
-                    <p class="city">Houston, TEXAS, USA </p>
-                    <p class="phonedire">
-                        Phone: +1 (888) 624-9522
-                        <br>1301 Fannin St #2440
-                    </p>
-                    <div class="combotime"><div class="time space">Local time: <div id="clock3"></div></div></div>
-                </div>
-                <div id="map-canvas2" ></div>
-             </div>
-        </div>
-
+      </form>
+      <p class="form-error">An error occured. <span>Please, try again later.</span></p>
+      <div class="dires">
+      	<div class="mapas map1">
+              <div class="infodire direusa">
+                  <p class="city">Montevideo, URUGUAY</p>
+                  <p class="office">HEADQUARTERS</p>
+                  <p class="phonedire">
+                      Phone: +598 99 226 488
+                      <br>Jaime Zudañez 2721
+                  </p>
+                   <div class="combotime"><div class="time">Local time: <div id="clock4"></div></div></div>
+               </div>
+              <div id="map-canvas"></div>
+           </div>
+           <div class="mapas map2">
+               <div class="infodire direusa">
+                  <p class="city">Houston, TEXAS, USA </p>
+                  <p class="phonedire">
+                      Phone: +1 (888) 624-9522
+                      <br>1301 Fannin St #2440
+                  </p>
+                  <div class="combotime"><div class="time space">Local time: <div id="clock3"></div></div></div>
+              </div>
+              <div id="map-canvas2" ></div>
+           </div>
+      </div>
     </div>
     <div class="vacio"></div>
 </section>

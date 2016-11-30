@@ -1894,11 +1894,13 @@ section.separadorgris.alturaseparador {
 .ch-info p a:hover {
     color: rgba(255, 242, 34, .8)
 }
-.ch-item:hover .ch-info {
+.ch-item:hover .ch-info,
+.ch-item.active .ch-info {
     transform: scale(1);
     opacity: 1
 }
-.ch-item:hover .ch-info p {
+.ch-item:hover .ch-info p,
+.ch-item.active .ch-info p {
     opacity: 1
 }
 .detalle {

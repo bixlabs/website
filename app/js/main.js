@@ -372,4 +372,11 @@
     }
   });*/
 
+  $('.ch-item').on('click', function () {
+    if(IS_IPHONE) {
+      $(this).parent().siblings().find('.ch-item').removeClass('active');
+      $(this).toggleClass('active');
+    }
+  });
+
 })();

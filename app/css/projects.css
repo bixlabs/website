@@ -1,0 +1,170 @@
+/*-------------------------------------------------------*/
+/* PROJECTS
+/*-------------------------------------------------------*/
+
+.bloquetexto h2 {
+  width: 90%;
+  height: 27px;
+  font-size: 19px;
+  line-height: 1.42;
+  color: #000
+}
+
+.comentario {
+  height: auto;
+  object-fit: contain;
+  font-family: Lato;
+  font-size: 17px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.71;
+  color: #555
+}
+
+.botones {
+  width: 195px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #50e3c2;
+  margin: 40px 0;
+  box-shadow: 0 8px 12px 0 rgba(91, 145, 147, .17);
+  border: 1px solid #50e3c2
+}
+.portfolio header {
+  width: 100%
+}
+
+.portfolio ul li {
+  list-style: none;
+  font-family: Lato;
+  font-weight: 200
+}
+#jssor_1 h1, .portfoliomin h1 {
+  letter-spacing: -1px!important;
+  text-align: left!important
+}
+.portfoliomin {
+  min-height: 500px
+}
+.portfoliomin .derecha img, .portfoliomin .izquierda img {
+  width: 85%;
+  margin: 24% auto 0
+}
+.portfoliomin .container {
+  background: #f6f6f6
+}
+.call, .confi, .filtro .active, .linkboton, .portfolio h1 {
+  text-align: center
+}
+#Container .mix {
+  display: none;
+  width: 100%
+}
+.filtro {
+  width: 800px;
+  margin: 0 auto;
+  display: block;
+  height: 90px;
+  display: none;
+}
+.filtro .active, .filtro div {
+  height: 50px;
+  line-height: 50px;
+  letter-spacing: .8px;
+  font-weight: 300;
+  font-size: 17px
+}
+.filtro .active {
+  border: 1px solid #50e3c2;
+  color: #50e3c2
+}
+.filtro div {
+  float: left;
+  border: 1px solid #000;
+  padding: 0 20px;
+  margin: 20px
+}
+.bloquetexto, .imagen {
+  width: 50%;
+  float: left
+}
+
+.botones:hover, .upicon img:hover {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out
+}
+
+.botones3 p, .llamado, .mitadizquierda p, .nombre, .piecaja p, .profesion {
+  font-style: normal
+}
+.botones3 {
+  width: 185px;
+  height: 49px;
+  border-radius: 6px;
+  background-color: #2edad3;
+  box-shadow: 0 3px 12px 0 #04596a
+}
+.botones3 p {
+  width: 149.9px;
+  height: 27px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 700!important;
+  font-stretch: normal;
+  line-height: .97;
+  text-align: center;
+  color: #fff;
+  padding: 15px
+}
+.botones3:hover {
+  background: #12C2BB
+}
+.bloquetexto .botones {
+  margin-bottom: 0;
+}
+.botones:hover {
+  color: #50e3c2;
+  background-color: #fff;
+  border: 1px solid #50e3c2;
+  transition: all .5s ease-in-out
+}
+
+.linkboton {
+  color: #fff;
+  font-family: lato;
+  line-height: 43px
+}
+.linkboton:hover {
+  color: #50e3c2;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out
+}
+.homeprojects .derecha, .homeprojects .izquierda, .how {
+  background: #fff
+}
+.derecha, .izquierda {
+  background-image: linear-gradient(180deg, #f6f6f6, #fff)
+}
+.izquierda {
+  height: 600px;
+  object-fit: contain
+}
+.derecha {
+  object-fit: contain;
+  height: 600px
+}
+.derecha .centro a, .menu .centro a, .mathap .centro a {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.derecha .bloquetexto .botones, .menu .bloquetexto .botones, .mathap .bloquetexto .botones {
+  margin: 0;
+}
+.derecha .bloquetexto, .imagen {
+  float: right
+}

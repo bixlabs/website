@@ -1,0 +1,68 @@
+
+
+.video {
+  height: calc(100vh - 70px)
+}
+.videocontainer {
+  width: 100%;
+  height: calc(100vh + 50px);
+  overflow: hidden;
+  margin-top: -50px;
+  position: relative
+}
+.conjunto {
+  z-index: 1;
+  margin-top: -150px
+}
+.titulohome span {
+  color: #50e3c2
+}
+.introtext {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px
+}
+video#bgvid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100vh;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+  z-index: -1
+}
+.subtitulo, .titulohome {
+  width: 100%;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto
+}
+.introtext {
+  height: 102%
+}
+.titulohome {
+  font-size: 55px;
+  letter-spacing: 1px
+}
+.subtitulo {
+  line-height: 45px;
+  max-width: 630px;
+  font-size: 20px;
+  color: #56fff2
+}
+.subconjunto img {
+  margin: 0 auto 60px
+}
+video#bgvid2 {
+  z-index: -100;
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  position: absolute
+}

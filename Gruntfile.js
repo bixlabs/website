@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         files: [{
           dot: true,
           src: [
-            '.tmp',
+            '.tmp/',
             'dist/{,*/}*',
             '!dist/.git{,*/}*'
           ]
@@ -32,8 +32,6 @@ module.exports = function(grunt) {
           dest: 'dist',
           src: [
             '*.{ico,png,txt}',
-            '*.html',
-            '!index.html',
             '*.php',
             'img/{,*/}*.*',
             'fonts/{,*/}*.*',
@@ -46,7 +44,7 @@ module.exports = function(grunt) {
           cwd: '.tmp',
           dest: 'dist',
           src: [
-            'index.html',
+            'app/*.html',
           ]
         }]
       }
@@ -185,8 +183,8 @@ module.exports = function(grunt) {
         options:{
           cssmin: true
         },
-        src: 'app/index.html',
-        dest: '.tmp/index.html'
+        src: ['app/*.html'],
+        dest: '.tmp/'
       }
     }
 

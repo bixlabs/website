@@ -1,0 +1,338 @@
+.contactback {
+  background: url(../img/fondoazul@2x.png) no-repeat center center;
+  background-size: cover;
+  height: 200px
+}
+.contenedor {
+  width: 80%;
+  max-width: 1200px;
+  margin: 50px auto;
+  height: 600px
+}
+.formulario {
+  float: left;
+  padding-top: 20px;
+}
+.formulario form {
+  margin-top: 20px;
+}
+.formulario form p {
+  float: right;
+  color: #869097
+}
+.f1 {
+  margin-right: 3%;
+  width: 47%;
+}
+.f2 {
+  margin-left: 3%;
+  width: 47%;
+}
+.contactform form input, .contactform form textarea, select {
+  width: calc(100% - 10px);
+  margin-top: 5px;
+  height: 50px;
+  object-fit: contain;
+  background-color: #f3f3f3;
+  border: none;
+  padding: 0 0 0 10px;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.33;
+  color: #a9a9a9;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #f3f3f3;
+  font-family: lato;
+  border-radius: 5px;
+}
+.contactform textarea {
+  margin-top: 15px;
+  height: 150px!important;
+  padding-top: 10px
+}
+.contactform input:focus, .contactform textarea:focus {
+  background: rgba(248, 248, 248, .7);
+  border: none;
+  box-shadow: none;
+  outline: 0;
+  border-bottom: solid 3px #0053bf;
+  color: #0053bf;
+  font-weight: 300
+}
+#drop a, #drop p {
+  font-size: 17px;
+  text-align: center
+}
+
+#drop, #drop a, #drop p {
+  width: 100%
+}
+select {
+  width: 100%;
+  height: 55px;
+  border-radius: 5px;
+}
+.send {
+  border: none;
+  padding-left: 0!important;
+  width: 134px!important;
+  height: 49px!important;
+  border-radius: 6px!important;
+  background-color: #2edad3!important;
+  box-shadow: 0 3px 5px 0 rgba(3, 88, 106, .14);
+  color: #fff!important;
+  float: right;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400!important;
+  border-bottom: none!important
+}
+#drop p, .info, .required {
+  font-weight: 300
+}
+.send:hover {
+  background: #12C2BB
+}
+.info {
+  font-size: 20px;
+  color: #869097
+}
+
+
+.box__file {
+  background-color: #f9f9f9!important;
+  border: 1px dashed #0053bf!important;
+  height: 85px!important
+}
+#drop, #upload ul li {
+  background-color: #f9f9f9
+}
+.required {
+  color: grey
+}
+
+#drop {
+  height: 84px;
+  border: 1px dashed #0053bf
+}
+#drop a {
+  border-radius: 2px;
+  margin-top: 12px;
+  line-height: 1;
+  color: #2edad3;
+  text-decoration: underline
+}
+#drop p {
+  color: #869097;
+  padding-top: 15px
+}
+#upload ul {
+  list-style: none;
+  margin: 5px 0 0;
+  padding: 0;
+  width: 500px
+}
+#upload ul li {
+  border-bottom: 1px solid #f3f3f3;
+  padding: 15px;
+  height: 40px;
+  position: relative
+}
+.estrella {
+  margin-top: 10px
+}
+#upload ul li p {
+  width: 144px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #2edad3;
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute
+}
+#upload ul li i {
+  font-weight: 400;
+  font-style: normal;
+  color: #7f7f7f;
+  display: block
+}
+.city, .office {
+  font-weight: 700
+}
+#upload ul li span {
+  width: 15px;
+  height: 12px;
+  background: url(../img/icons@2x.png) no-repeat;
+  position: absolute;
+  top: 28px;
+  right: 33px;
+  cursor: pointer
+}
+#upload ul li.working span {
+  height: 16px;
+  background-position: 0 -12px
+}
+#upload ul li.error p {
+  color: red
+}
+#drop input, #upload ul li input, canvas {
+  display: none
+}
+.contactform button span {
+  text-transform: uppercase;
+}
+.contactform .loading {
+  display: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-success {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(298deg, #50e3c2, #0bd9d4 85%, #00d8d7);
+  z-index: 2;
+}
+.contact-success .content {
+  background-image: url(../img/mail-icon.png);
+  background-repeat: no-repeat;
+  background-position: 49% top;
+  margin-top: 25vh;
+  padding-top: 50px;
+}
+.contact-success h2 {
+  font-family: Lato;
+  font-size: 56px;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+.contact-success p {
+  font-family: Lato;
+  font-size: 26px;
+  text-align: center;
+  color: #ffffff;
+  max-width: 745px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+.contact-success p:last-child {
+  margin-bottom: 0;
+}
+.form-error {
+  color: #DB1F11;
+  display: none;
+  margin-top: 12px;
+}
+#map-canvas {
+  margin-top: 5px;
+  height: 107px;
+  width: 50%;
+  position: absolute;
+  position: relative;
+  float: right;
+}
+.mapas.map1 {
+  margin-right: 3%;
+}
+.mapas.map2 {
+  margin-left: 3%;
+}
+.mapas {
+  margin: 30px 0;
+  float: left;
+  width: 47%;
+}
+.time {
+  width: 150px;
+  float: left;
+}
+.local-time {
+  text-transform: uppercase;
+}
+
+#clock4, #clock3 {
+  float: right;
+  margin-left: 5px;
+}
+.dires {
+  float: right;
+  width: 100%;
+  text-align: right
+}
+.md-content p, .owl-theme .owl-controls, .phonenumber {
+  text-align: center
+}
+.dires p {
+  font-size: 16px;
+  margin: 5px 0
+}
+.office {
+  color: #2edad3
+}
+.phonedire {
+  color: #b5b5b5;
+  font-weight: 300
+}
+#map-canvas {
+  margin-top: 5px
+}
+.mapas {
+  margin: 30px 0;
+  float: left
+}
+#map-canvas2 {
+  height: 107px;
+  width: 50%;
+  float: right
+}
+
+.send:focus {
+  width: 134px!important;
+  height: 49px!important;
+  border-radius: 6px;
+  background-color: #2edad3!important;
+  box-shadow: 0 3px 5px 0 rgba(3, 88, 106, .14);
+  color: #fff!important;
+  float: right;
+  border-bottom: none!important;
+  font-weight: 400!important
+}
+.phonenumber {
+  font-weight: 300;
+  font-size: 20px;
+  color: #0affc8;
+  height: 28px;
+  width: 515px;
+  margin: 10px auto 0
+}
+.phonenumber p {
+  float: left;
+  margin: 0 15px
+}
+.column {
+  background: #002f44;
+  height: 3px
+}
+.opacity {
+  font-weight: 300!important
+}
+.infodire {
+  float: left;
+  text-align: left;
+}
+.map2 .combotime {
+  margin-top: 26px;
+}

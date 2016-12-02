@@ -209,6 +209,8 @@
             $('.form-error').hide();
             $('.contact-success').fadeIn();
             $form.find('input[type=text], textarea').val('');
+            $form.find('#upload ul').html('');
+            $form.find('.attachementsInput').val('');
           } else {
             $('.form-error').show();
           }
@@ -279,6 +281,7 @@
   });*/
 
   /*portfolio ==============================================*/
+
   $(function(){
     // Instantiate MixItUp:
     $('#Container').mixItUp();
@@ -305,42 +308,56 @@
       // either via the browse button, or via drag/drop:
       add: function (e, data) {
 
-        var tpl = $('<li class="working"><input type="text" value="0" data-width="48" data-height="48"'+
-          ' data-fgColor="#0788a5" data-readOnly="1" data-bgColor="#3e4043" /><p></p><span></span></li>');
+        var tpl = $('<li class="working"><p></p><span></span></li>');
 
         // Append the file name and file size
-        tpl.find('p').text(data.files[0].name).append('<i>' + formatFileSize(data.files[0].size) + '</i>');
+        tpl.find('p').text(data.files[0].name)
+                     .append('<i>' + formatFileSize(data.files[0].size) + '</i>');
 
         // Add the HTML to the UL element
         data.context = tpl.appendTo(ul);
 
-        // Initialize the knob plugin
-        tpl.find('input').knob();
+        // Automatically upload the file once it is added to the queue
+        var jqXHR = data.submit()
+                        .success(function (result, textStatus, jqXHR) {
+                          var fileUrl, arr, r,
+                              $hidden = $('.attachementsInput');
+
+                          result = JSON.parse(result);
+                          fileUrl = result.files[0].url;
+
+                          if (result.files[0].error) {
+                            data.context.addClass('error');
+                          }
+                          var currVal = $hidden.val();
+                          if (currVal.length) {
+                            arr = currVal.split(',');
+                            arr.push(fileUrl);
+                            r = arr.join(',');
+                          } else {
+                            r = fileUrl;
+                          }
+
+                          $hidden.val(r);
+                        })
+                        .error(function (jqXHR, textStatus, errorThrown) {
+                          data.context.addClass('error');
+                        });
 
         // Listen for clicks on the cancel icon
-        tpl.find('span').click(function(){
-
-          if(tpl.hasClass('working')){
+        tpl.find('span').click(function (){
+          if(tpl.hasClass('working') || tpl.hasClass('error')){
             jqXHR.abort();
+            tpl.fadeOut(function (){
+              tpl.remove();
+            });
           }
-
-          tpl.fadeOut(function(){
-            tpl.remove();
-          });
-
         });
-
-        // Automatically upload the file once it is added to the queue
-        var jqXHR = data.submit();
       },
       progress: function(e, data){
 
         // Calculate the completion percentage of the upload
         var progress = parseInt(data.loaded / data.total * 100, 10);
-
-        // Update the hidden input field and trigger a change
-        // so that the jQuery knob plugin knows to update the dial
-        data.context.find('input').val(progress).change();
 
         if(progress === 100){
           data.context.removeClass('working');
@@ -371,6 +388,8 @@
       return (bytes / 1000).toFixed(2) + ' KB';
     }
   });
+
+  /* ==============================================*/
 
   $('.ch-item').on('click', function () {
     if(IS_IPHONE) {

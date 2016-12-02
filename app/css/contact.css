@@ -83,9 +83,12 @@ select {
   color: #fff!important;
   float: right;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 400!important;
-  border-bottom: none!important
+  font-family: lato;
+  border-bottom: none!important;
+  margin-bottom: 15px;
+  padding: 0 0 0 10px;
 }
 #drop p, .info, .required {
   font-weight: 300
@@ -113,7 +116,8 @@ select {
 
 #drop {
   height: 84px;
-  border: 1px dashed #0053bf
+  border: 1px dashed #0053bf;
+  box-sizing: border-box;
 }
 #drop a {
   border-radius: 2px;
@@ -130,7 +134,7 @@ select {
   list-style: none;
   margin: 5px 0 0;
   padding: 0;
-  width: 500px
+  width: 100%
 }
 #upload ul li {
   border-bottom: 1px solid #f3f3f3;
@@ -142,13 +146,14 @@ select {
   margin-top: 10px
 }
 #upload ul li p {
-  width: 144px;
+  width: auto;
   overflow: hidden;
   white-space: nowrap;
   color: #2edad3;
   font-size: 16px;
   font-weight: 700;
-  position: absolute
+  position: absolute;
+  max-width: 80%;
 }
 #upload ul li i {
   font-weight: 400;
@@ -168,7 +173,8 @@ select {
   right: 33px;
   cursor: pointer
 }
-#upload ul li.working span {
+#upload ul li.working span,
+#upload ul li.error span {
   height: 16px;
   background-position: 0 -12px
 }

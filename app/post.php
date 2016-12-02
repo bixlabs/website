@@ -16,30 +16,76 @@ $name     = $_POST['name'];
 $email    = $_POST['email'];
 $message = $_POST['message'];
 $phone = $_POST['phone'];
+$attachments = $_POST['attachments'];
 
-//$test = $_POST['upl'];
+if(isset($_FILES['upl'])) {
+  // A list of permitted file extensions
+  $allowed = array('png', 'jpg', 'jpeg', 'gif','zip', 'pdf');
 
+  if($_FILES['upl']['error'] == 0){
 
+    $extension = pathinfo($_FILES['upl']['name'], PATHINFO_EXTENSION);
 
+    if(!in_array(strtolower($extension), $allowed)){
+      echo json_encode(array(
+        "files" => array(
+            [
+              "name" => $_FILES['upl']['name'],
+              "size" => $_FILES["upl"]["size"],
+              "error" => "File type not allowed"
+            ]
+          )
+        ));
+      exit;
+    }
 
-   // echo  "*** " . $test . " ***";
+    $url = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}";
+    $newfilename = time() . '-' . rand(100, 999) . '.' . end(explode(".",$_FILES["upl"]["name"]));
 
+    if(move_uploaded_file($_FILES['upl']['tmp_name'], $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $newfilename)){
+      echo json_encode(array(
+          "files" => array(
+              [
+                "name" => $_FILES['upl']['name'],
+                "size" => $_FILES["upl"]["size"],
+                "url" => $url . '/uploads/' . $newfilename
+              ]
+            )
+        ));
+    } else {
+      echo json_encode(array(
+        "files" => array(
+            [
+              "name" => $_FILES['upl']['name'],
+              "size" => $_FILES["upl"]["size"],
+              "error" => "File could not be saved"
+            ]
+          )
+        ));
+    }
+  } else {
+    echo json_encode(array(
+      "files" => array(
+          [
+            "name" => $_FILES['upl']['name'],
+            "size" => $_FILES["upl"]["size"],
+            "error" => "Error"
+          ]
+        )
+      ));
+  }
+  exit;
+}
 
-   // var_dump($_POST);
-   // var_dump($_FILES);
+if ($attachments) {
 
-//$name_of_uploaded_file =
-//    basename($_FILES['upl']['name']);
+  $attachments_str = "";
+  $files = explode(",", $attachments);
+  foreach ($files as $file) {
+    $attachments_str .= $file . PHP_EOL;
+  }
+}
 
-    //get the file extension of the file
- //   $type_of_uploaded_file =
- //   substr($name_of_uploaded_file,
-  //         strrpos($name_of_uploaded_file, '.') + 1);
-
-    //$size_of_uploaded_file =
-    //$_FILES["upl"]["size"]/1024;//size in KBs
-
-   //echo  "*** " . $name_of_uploaded_file . " ***";
 if(trim($name) == '') {
   echo '<div class="notification error clearfix"><p><strong>Attention!</strong> You must enter your name.</p></div>';
   exit();
@@ -82,9 +128,10 @@ $e_subject = 'You\'ve been contacted by ' . $name . '.';
 
 $e_body = "You have been contacted by $name , their message is as follows." . PHP_EOL . PHP_EOL;
 $e_content = "\"$message\"" . PHP_EOL . PHP_EOL;
+$e_attachments = "The following files were uploaded:" . PHP_EOL . PHP_EOL . $attachments_str . PHP_EOL . PHP_EOL;
 $e_reply = "You can contact $name via email, $email or via phone, $phone";
 
-$msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
+$msg = wordwrap( $e_body . $e_content . $e_attachments . $e_reply, 70 );
 
 $headers = "From: $email" . PHP_EOL;
 $headers .= "Reply-To: $email" . PHP_EOL;

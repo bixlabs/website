@@ -75,9 +75,9 @@
 <!-- ______________ F O R M ________________ -->
 <section class="contactform">
     <div class="contenedor">
-      <form name="contactform" id="contactform" action="post.php" method="post" >
+      <form name="contactform" id="contactform" action="post.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="attachments" class="attachementsInput">
       	<div class="formulario f1">
-
             <input type="text" id="name" name="name"  placeholder="* Hey, what's your name?" required>
             <input type="text" id="email" name="email"  placeholder="* What's your mail?" required>
             <input type="text" id="phone" name="phone"   placeholder="Company name">
@@ -105,7 +105,7 @@
         </div>
         <div class="vacio"></div>
         <div class="inputsgroup">
-        	<input type="submit" value="SEND" class="send">
+        	<button type="submit" class="send"><div class="loading"></div><span>Send</span></button>
           <p class="required">* Required</p>
         </div>
       </form>

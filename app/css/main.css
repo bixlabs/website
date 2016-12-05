@@ -97,7 +97,7 @@
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
-	left: calc(50% - 40px)
+	left: calc(50% - 60px)
 }
 #jssor_1 .centro {
 	height: 600px

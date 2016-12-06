@@ -66,3 +66,553 @@ video#bgvid2 {
   height: auto;
   position: absolute
 }
+
+/* -------------------------------------------- */
+/*
+/* -------------------------------------------- */
+
+.icohow {
+  margin-bottom: 5px;
+}
+
+.triplete {
+  margin-top: 100px;
+}
+
+.altura {
+  height: 120px;
+}
+
+.logobibix {
+  width: 230px;
+}
+
+.altura .icons {
+  height: 95px;
+}
+
+.clients .triplete p {
+  font-size: 31px;
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #183548;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nombre,
+.profesion {
+  font-weight: 400;
+  text-align: center;
+}
+
+.linea {
+  border-bottom: 1px solid #dcdcdc;
+  width: 175px;
+  margin: 50px auto 0;
+}
+
+.nombre {
+  font-size: 24px;
+  color: #183548;
+}
+
+.profesion {
+  font-size: 18px;
+  color: #50e3c2;
+}
+
+.clienteimg {
+  margin: 40px auto 20px;
+  border-radius: 60px;
+  height: 90px;
+}
+
+#owl-demo2 .triplete {
+  margin-top: 0;
+}
+
+#demo2 {
+  background: #fff;
+}
+
+.icosombra {
+  width: 70px;
+  height: auto!important;
+}
+
+.owl-carousel {
+  display: none;
+  position: relative;
+}
+
+.owl-carousel {
+  width: 100%;
+  -ms-touch-action: pan-y;
+}
+
+@-moz-document url-prefix()  {
+  .container .conjunto {
+    margin-top: -80px;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .separadorgris {
+    height: 100%;
+  }
+
+  .mouse {
+    margin-top: -14%;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1095px) {
+  .introtext {
+    width: 90%;
+  }
+
+  .container .conjunto .titulohome {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .centro {
+    height: auto;
+  }
+
+  .mouse {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .conjunto {
+    margin-top: 0;
+  }
+
+  .fixed,
+  nav {
+    position: fixed;
+  }
+
+  html {
+    background: url(img/polina.jpg) center center no-repeat fixed #000;
+  }
+
+  .clients .triplete p {
+    font-size: 25px;
+  }
+
+  .how {
+    padding-bottom: 110px;
+  }
+
+  .portfolio h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    height: 70px;
+    width: 100%;
+    font-size: 11pt;
+    font-weight: 700;
+  }
+
+  .video {
+    background: url(img/polina_ipad1.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .logocont {
+    background: url(img/logo.png) center center no-repeat;
+  }
+
+  .menup {
+    margin-bottom: 13px;
+  }
+
+  .introtext {
+    height: 100%;
+  }
+
+  .fixed {
+    background: #fff;
+  }
+
+  nav a {
+    color: grey;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 0;
+    background: #fff;
+  }
+
+  nav a {
+    color: grey;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .introtext {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .talkcolor,
+  nav a {
+    text-align: left;
+    color: grey;
+  }
+
+  nav {
+    border-bottom: 0;
+  }
+
+  nav ul {
+    display: none;
+    height: auto;
+  }
+
+  .logocont {
+    background: url(img/logo.png) center center no-repeat;
+  }
+
+  .mouse {
+    display: none;
+  }
+
+  #pull,
+  #pull span {
+    display: block;
+    position: absolute;
+  }
+
+  .centradomenu,
+  .menup {
+    width: 100%!important;
+    background: #fff;
+  }
+
+  .centradomenu {
+    padding: 0;
+  }
+
+  .menup {
+    padding-left: 5%;
+  }
+
+  .menup {
+    border-bottom: 1px solid #2edad3;
+    margin-top: 0;
+  }
+
+  .menup li {
+    width: 100%;
+    margin: 0;
+    border-bottom: none;
+  }
+
+  #pull span {
+    height: 4px;
+    width: 40px;
+    background: #50e3c2;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  #pull span:nth-child(1) {
+    top: 19px;
+  }
+
+  #pull span:nth-child(2),
+  #pull span:nth-child(3) {
+    top: 29px;
+  }
+
+  #pull span:nth-child(4) {
+    top: 39px;
+  }
+
+  #pull {
+    width: 70px;
+    float: right;
+    right: 0;
+    height: 70px;
+    top: 0;
+  }
+
+  .talk img {
+    display: none;
+  }
+
+  nav a {
+    padding-left: 7%;
+    width: 100%;
+    text-align: left;
+  }
+
+  .col {
+    width: 300px;
+    float: none;
+    margin: 0 auto 30px;
+  }
+
+  nav a {
+    float: none!important;
+    LINE-HEIGHT: 60PX;
+  }
+
+  .talk {
+    width: 100%!important;
+    height: 60px;
+    background: 0 0!important;
+    border-radius: 0;
+  }
+
+  .talkcolor {
+    margin: 0;
+    padding: 0 0 0 7%;
+    width: 100%;
+  }
+
+  .clients .triplete p {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .how {
+    padding-bottom: 100px;
+  }
+
+  .conjunto {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-height: 710px) {
+  .mouse {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .mouse {
+    display: none;
+  }
+
+  body {
+    max-width: 710px;
+  }
+
+  .separadorgris {
+    padding: 80px 0!important;
+  }
+
+  .subconjunto img {
+    padding-top: 0;
+  }
+
+  .calltoaction {
+    height: 135px;
+  }
+
+  .calltoaction p {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 630px) {
+  body {
+    max-width: 630px;
+  }
+
+  .how .centradocomun {
+    height: auto!important;
+  }
+
+  .centradocomun {
+    height: inherit;
+  }
+}
+
+@media (max-width: 568px) {
+  nav li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+  .titulohome {
+    font-size: 40px;
+  }
+
+  .subtitulo {
+    font-size: 22px;
+    width: 80%;
+    line-height: 30px;
+    margin-top: 30px;
+  }
+
+  .introcont .separadorgris {
+    padding-bottom: 0!important;
+  }
+
+  .logocont {
+    width: 108px;
+    margin-top: 10px;
+    background-size: 108px!important;
+    height: 40px;
+  }
+
+  #pull {
+    height: 43px;
+  }
+
+  #pull span:nth-child(1) {
+    top: 20px;
+  }
+
+  #pull span:nth-child(2),
+  #pull span:nth-child(3) {
+    top: 30px;
+  }
+
+  #pull span:nth-child(4) {
+    top: 40px;
+  }
+
+  #pull span {
+    width: 29px;
+    left: 10px;
+  }
+
+  .calltoaction p {
+    width: 80%;
+    margin: 0 auto;
+    max-width: inherit;
+  }
+
+  .calltoaction {
+    height: 170px;
+  }
+
+  .conjunto {
+    margin-top: 0;
+  }
+
+  .takealook {
+    padding-top: 60px;
+  }
+
+  .here {
+    height: 110px;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .video {
+    min-height: 110vh;
+  }
+
+  .calltoaction p:first-child {
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 465px) {
+  body {
+    max-width: 465px;
+  }
+}
+
+@media (max-width: 414px) {
+  .subtitulo {
+    width: auto;
+  }
+
+  .col {
+    margin: 0 0 50px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .video {
+    background: url(img/polinaphone.jpg) center center no-repeat;
+    background-size: cover;
+    height: 110vh;
+  }
+
+  .conjunto {
+    margin-top: 0;
+  }
+
+  .calltoaction p {
+    padding-top: 30px;
+  }
+
+  .introtext {
+    padding-top: 0;
+    height: calc(100vh - 0px);
+  }
+}
+
+@media (max-width: 400px) {
+  .calltoaction p {
+    padding-top: 0;
+  }
+
+  .how {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .calltoaction p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 370px) {
+  .here {
+    height: 105px;
+  }
+}
+
+@media (max-width: 346px) {
+  .here {
+    height: 130px;
+  }
+
+  .titulohome {
+    font-size: 35px;
+  }
+
+  .subtitulo {
+    font-size: 19px;
+    margin-top: 12px;
+  }
+}

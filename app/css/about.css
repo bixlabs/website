@@ -38,3 +38,381 @@
 .who img {
   margin: 60px auto 0
 }
+
+/* -------------------------------------------- */
+/*
+/* -------------------------------------------- */
+
+@-moz-document url-prefix()  {
+  .centroraro {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .separadorgris {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1095px) {
+  .introtext {
+    width: 90%;
+  }
+
+  .alturaseparador {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .centro {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .centroraro {
+    padding-top: 70px;
+  }
+
+  .intro {
+    z-index: 0;
+  }
+
+  .fixed,
+  nav {
+    position: fixed;
+  }
+
+  html {
+    background: url(../img/polina.jpg) center center no-repeat fixed #000;
+  }
+
+  .firstcomment {
+    text-align: center;
+    font-size: 30px!important;
+  }
+
+  .alturaseparador {
+    padding: 50px 0;
+  }
+
+  .portfolio h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    height: 70px;
+    width: 100%;
+    font-size: 11pt;
+    font-weight: 700;
+  }
+
+  .intro {
+    margin-top: 0;
+  }
+
+  .logocont {
+    background: url(../img/logo.png) center center no-repeat;
+  }
+
+  .menup {
+    margin-bottom: 13px;
+  }
+
+  .introtext {
+    height: 100%;
+  }
+
+  .talent p {
+    font-size: 35px;
+  }
+
+  .fixed {
+    background: #fff;
+  }
+
+  nav a {
+    color: grey;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro {
+    height: 350px;
+  }
+
+  .love .introtext {
+    padding-top: 15px;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    background: #fff;
+  }
+
+  nav a {
+    color: grey;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .introtext {
+    height: 100%;
+  }
+
+  .talent p {
+    font-size: 30px;
+  }
+
+  .who {
+    padding-top: 50px;
+  }
+
+  .centroraro {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .talkcolor,
+  nav a {
+    text-align: left;
+    color: grey;
+  }
+
+  nav {
+    border-bottom: 0;
+  }
+
+  nav ul {
+    display: none;
+    height: auto;
+  }
+
+  .logocont {
+    background: url(../img/logo.png) center center no-repeat;
+  }
+
+  #pull,
+  #pull span {
+    display: block;
+    position: absolute;
+  }
+
+  .centradomenu,
+  .menup {
+    width: 100%!important;
+    background: #fff;
+  }
+
+  .centradomenu {
+    padding: 0;
+  }
+
+  .menup {
+    padding-left: 5%;
+  }
+
+  .menup {
+    border-bottom: 1px solid #2edad3;
+    margin-top: 0;
+  }
+
+  .menup li {
+    width: 100%;
+    margin: 0;
+    border-bottom: none;
+  }
+
+  #pull span {
+    height: 4px;
+    width: 40px;
+    background: #50e3c2;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  #pull span:nth-child(1) {
+    top: 19px;
+  }
+
+  #pull span:nth-child(2),
+  #pull span:nth-child(3) {
+    top: 29px;
+  }
+
+  #pull span:nth-child(4) {
+    top: 39px;
+  }
+
+  #pull {
+    width: 70px;
+    float: right;
+    right: 0;
+    height: 70px;
+    top: 0;
+  }
+
+  .talk img {
+    display: none;
+  }
+
+  nav a {
+    padding-left: 7%;
+    width: 100%;
+    text-align: left;
+  }
+
+  nav a {
+    float: none!important;
+    LINE-HEIGHT: 60PX;
+  }
+
+  .talk {
+    width: 100%!important;
+    height: 60px;
+    background: 0 0!important;
+    border-radius: 0;
+  }
+
+  .talkcolor {
+    margin: 0;
+    padding: 0 0 0 7%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  body {
+    max-width: 710px;
+  }
+
+  .separadorgris {
+    padding: 80px 0!important;
+  }
+
+  .comentariohome {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 630px) {
+@-moz-document url-prefix()  {
+    .centroraro {
+      height: 400px;
+    }
+}
+
+  body {
+    max-width: 630px;
+  }
+
+  .talent p {
+    font-weight: 400;
+    color: #fff;
+    width: 100%;
+  }
+
+  .centradocomun {
+    height: inherit;
+  }
+}
+
+@media (max-width: 568px) {
+  nav li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+  .logocont {
+    width: 108px;
+    margin-top: 10px;
+    background-size: 108px!important;
+    height: 40px;
+  }
+
+  #pull {
+    height: 43px;
+  }
+
+  #pull span:nth-child(1) {
+    top: 20px;
+  }
+
+  #pull span:nth-child(2),
+  #pull span:nth-child(3) {
+    top: 30px;
+  }
+
+  #pull span:nth-child(4) {
+    top: 40px;
+  }
+
+  #pull span {
+    width: 29px;
+    left: 10px;
+  }
+
+  .intro {
+    height: 350px;
+    margin-top: 0;
+  }
+
+  .talent {
+    margin-top: 0;
+  }
+
+  .firstcomment {
+    font-size: 25px!important;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .talent {
+    height: 300px;
+  }
+
+  .love .talent {
+    height: auto;
+  }
+
+  .love .introtext {
+    height: 280px;
+  }
+}
+
+@media (max-width: 465px) {
+  body {
+    max-width: 465px;
+  }
+}
+
+@media (max-width: 414px) {
+  .talent {
+    margin-top: 0;
+  }
+
+  .introtext {
+    padding-top: 0;
+    height: calc(100vh - 0px);
+  }
+
+  .love .introtext {
+    height: 290px;
+    padding-top: 10px;
+  }
+}

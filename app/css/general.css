@@ -89,7 +89,7 @@ body, p {
   text-transform: uppercase
 }
 body {
-  font-family: Lato;
+  font-family: Lato, arial;
   overflow-x: hidden;
   background: #fff
 }
@@ -113,7 +113,7 @@ body {
 }
 #progstat {
   font-size: 50px;
-  font-family: lato;
+  font-family: lato, arial;
   font-weight: 300;
   letter-spacing: 3px;
   margin-top: -70px;
@@ -379,7 +379,7 @@ nav.header {
 }
 .bloquetexto h2, .portfolio h1 {
   font-weight: 400;
-  font-family: Lato;
+  font-family: Lato, arial;
   font-style: normal;
   font-stretch: normal;
   object-fit: contain

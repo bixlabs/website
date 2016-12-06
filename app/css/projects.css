@@ -13,7 +13,7 @@
 .comentario {
   height: auto;
   object-fit: contain;
-  font-family: Lato;
+  font-family: Lato, arial;
   font-size: 17px;
   font-weight: 300;
   font-style: normal;
@@ -38,7 +38,7 @@
 
 .portfolio ul li {
   list-style: none;
-  font-family: Lato;
+  font-family: Lato, arial;
   font-weight: 200
 }
 #jssor_1 h1, .portfoliomin h1 {
@@ -110,7 +110,7 @@
 .botones3 p {
   width: 149.9px;
   height: 27px;
-  font-family: Lato;
+  font-family: Lato, arial;
   font-size: 20px;
   font-weight: 700!important;
   font-stretch: normal;
@@ -134,7 +134,7 @@
 
 .linkboton {
   color: #fff;
-  font-family: lato;
+  font-family: lato, arial;
   line-height: 43px
 }
 .linkboton:hover {

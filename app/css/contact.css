@@ -42,7 +42,7 @@
   color: #a9a9a9;
   margin-bottom: 15px;
   border-bottom: 3px solid #f3f3f3;
-  font-family: lato;
+  font-family: lato, arial;
   border-radius: 5px;
 }
 .contactform textarea {
@@ -85,7 +85,7 @@ select {
   cursor: pointer;
   font-size: 19px;
   font-weight: 400!important;
-  font-family: lato;
+  font-family: lato, arial;
   border-bottom: none!important;
   margin-bottom: 15px;
   padding: 0 0 0 10px;
@@ -217,7 +217,7 @@ select {
   padding-top: 50px;
 }
 .contact-success h2 {
-  font-family: Lato;
+  font-family: Lato, arial;
   font-size: 56px;
   font-weight: 300;
   text-align: center;
@@ -225,7 +225,7 @@ select {
   margin-top: 20px;
 }
 .contact-success p {
-  font-family: Lato;
+  font-family: Lato, arial;
   font-size: 26px;
   text-align: center;
   color: #ffffff;

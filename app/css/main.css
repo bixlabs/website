@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,900);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700);
 
 .animated {
 	-webkit-animation-duration: 1s;
@@ -549,7 +549,7 @@
 .nolink {
 	height: 27px;
 	object-fit: contain;
-	font-family: Lato;
+	font-family: Lato, arial;
 	font-size: 16px;
 	font-weight: 400;
 	font-style: normal;
@@ -1266,7 +1266,7 @@ video#bgvid2 {
 	width: 404px;
 	height: 27px;
 	object-fit: contain;
-	font-family: Lato;
+	font-family: Lato, arial;
 	font-size: 22px;
 	letter-spacing: 4.1px;
 	color: #707070;

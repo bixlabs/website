@@ -168,3 +168,658 @@
 .derecha .bloquetexto, .imagen {
   float: right
 }
+
+/* -------------------------------------------- */
+/*
+/* -------------------------------------------- */
+
+.botones2 p,
+.conjuntoboton2 p {
+  letter-spacing: normal;
+}
+
+.botones2 {
+  width: 237px;
+  height: 45px;
+  background-color: #0296a5;
+  box-shadow: 0 8px 12px 0 rgba(45, 143, 147, .35);
+  float: right;
+  margin-top: 35px;
+  letter-spacing: 0;
+}
+
+.botones2 p {
+  letter-spacing: 0;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 0 0 18px;
+  float: left;
+  line-height: 43px;
+}
+
+.botones2 img {
+  float: left;
+  padding-top: 11px;
+  padding-left: 14px;
+  width: 23px;
+}
+
+.like {
+  letter-spacing: 5.5px!important;
+  font-weight: normal!important;
+  margin-top: 45px;
+}
+
+.likea a {
+  width: 100%!important;
+}
+
+.mate {
+  width: 28%!important;
+}
+
+.queblo {
+  HEIGHT: auto;
+  WIDTH: 38%!important;
+}
+
+.imagen img {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.centradonuevo {
+  width: 640px;
+}
+
+.segundo {
+  margin-top: 20px!important;
+}
+
+.brief {
+  font-weight: normal!important;
+}
+
+.mathup {
+  margin-bottom: 0px!important;
+}
+
+@-moz-document url-prefix()  {
+  .centroraro {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+@-moz-document url-prefix()  {
+  .portfoliomin .derecha img,
+  .portfoliomin .izquierda img {
+    margin-top: 120px;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .comentario {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1095px) {
+  .introtext {
+    width: 90%;
+  }
+
+  .comentario {
+    height: auto;
+  }
+
+  .derecha,
+  .izquierda {
+    height: 550px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .bloquetexto .botones {
+    margin-bottom: 50px;
+  }
+
+  .bloquetexto,
+  .imagen {
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .derecha,
+  .izquierda {
+    height: 100%;
+  }
+
+  .centro {
+    height: auto;
+  }
+
+  .imagen img {
+    width: 90%;
+    margin: 100px auto 80px;
+  }
+
+  .derecha .bloquetexto,
+  .imagen {
+    float: none;
+  }
+
+  .imagen {
+    display: none!important;
+  }
+
+  .comentario {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .centroraro {
+    padding-top: 70px;
+  }
+
+  .intro {
+    z-index: 0;
+  }
+
+  .fixed,
+  nav {
+    position: fixed;
+  }
+
+  html {
+    background: url(../img/polina.jpg) center center no-repeat fixed #000;
+  }
+
+  .conjuntoboton2 p {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 45px;
+    font-weight: bold;
+  }
+
+  .botones2 p {
+    width: auto!important;
+  }
+
+  .conjuntoboton2 {
+    width: 80%;
+  }
+
+  .filtro div {
+    height: 41px;
+    line-height: 42px;
+    padding: 0 9px;
+    margin: 15px;
+    font-size: 17px;
+  }
+
+  .filtro {
+    width: 597px;
+    height: auto;
+  }
+
+  .portfolio h1 {
+    font-size: 28px;
+  }
+
+  .botones2 {
+    float: none;
+    margin: 20px auto;
+  }
+
+  .portfoliomin .botones {
+    margin: 40px 0 0;
+  }
+
+  .botones.toptop {
+    margin-bottom: 50px;
+  }
+
+  .portfoliomin .calltoaction {
+    height: 175px;
+  }
+
+  nav {
+    height: 70px;
+    width: 100%;
+    font-size: 11pt;
+    font-weight: 700;
+  }
+
+  .intro {
+    margin-top: 0;
+  }
+
+  .logocont {
+    background: url(../img/logo.png) center center no-repeat;
+  }
+
+  .menup {
+    margin-bottom: 13px;
+  }
+
+  .introtext {
+    height: 100%;
+  }
+
+  .talent p {
+    font-size: 35px;
+  }
+
+  .portfoliomin .calltoaction p {
+    padding-top: 35px;
+  }
+
+  .portfoliomin .calltoaction .brief {
+    padding-top: 0;
+  }
+
+  .fixed {
+    background: #fff;
+  }
+
+  nav a {
+    color: grey;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro {
+    height: 350px;
+  }
+
+  .love .introtext {
+    padding-top: 15px;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    background: #fff;
+  }
+
+  nav a {
+    color: grey;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .introtext {
+    height: 100%;
+  }
+
+  .talent p {
+    font-size: 30px;
+  }
+
+  .centroraro {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .talkcolor,
+  nav a {
+    text-align: left;
+    color: grey;
+  }
+
+  nav {
+    border-bottom: 0;
+  }
+
+  nav ul {
+    display: none;
+    height: auto;
+  }
+
+  .logocont {
+    background: url(../img/logo.png) center center no-repeat;
+  }
+
+  #pull,
+  #pull span {
+    display: block;
+    position: absolute;
+  }
+
+  .centradomenu,
+  .menup {
+    width: 100%!important;
+    background: #fff;
+  }
+
+  .centradomenu {
+    padding: 0;
+  }
+
+  .menup {
+    padding-left: 5%;
+  }
+
+  .menup {
+    border-bottom: 1px solid #2edad3;
+    margin-top: 0;
+  }
+
+  .menup li {
+    width: 100%;
+    margin: 0;
+    border-bottom: none;
+  }
+
+  #pull span {
+    height: 4px;
+    width: 40px;
+    background: #50e3c2;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  #pull span:nth-child(1) {
+    top: 19px;
+  }
+
+  #pull span:nth-child(2),
+  #pull span:nth-child(3) {
+    top: 29px;
+  }
+
+  #pull span:nth-child(4) {
+    top: 39px;
+  }
+
+  #pull {
+    width: 70px;
+    float: right;
+    right: 0;
+    height: 70px;
+    top: 0;
+  }
+
+  .talk img {
+    display: none;
+  }
+
+  nav a {
+    padding-left: 7%;
+    width: 100%;
+    text-align: left;
+  }
+
+  nav a {
+    float: none!important;
+    LINE-HEIGHT: 60PX;
+  }
+
+  .talk {
+    width: 100%!important;
+    height: 60px;
+    background: 0 0!important;
+    border-radius: 0;
+  }
+
+  .talkcolor {
+    margin: 0;
+    padding: 0 0 0 7%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  body {
+    max-width: 710px;
+  }
+
+  .comentario {
+    height: auto;
+  }
+
+  .conjuntoboton2 {
+    width: 90%;
+  }
+
+  .conjuntoboton2 p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .botones2 {
+    max-width: 234px;
+    width: 100%;
+    float: none;
+    margin: 20px auto;
+  }
+
+  .calltoaction {
+    height: 135px;
+  }
+
+  .calltoaction p {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 630px) {
+@-moz-document url-prefix()  {
+    .centroraro {
+      height: 400px;
+    }
+}
+
+  body {
+    max-width: 630px;
+  }
+
+  .filtro div {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 9px;
+    margin: 15px 5px;
+    font-size: 14px;
+  }
+
+  .filtro {
+    width: 440px;
+  }
+
+  .talent p {
+    font-weight: 400;
+    color: #fff;
+    width: 100%;
+  }
+}
+
+@media (max-width: 568px) {
+  nav li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+  .logocont {
+    width: 108px;
+    margin-top: 10px;
+    background-size: 108px!important;
+    height: 40px;
+  }
+
+  #pull {
+    height: 43px;
+  }
+
+  #pull span:nth-child(1) {
+    top: 20px;
+  }
+
+  #pull span:nth-child(2),
+  #pull span:nth-child(3) {
+    top: 30px;
+  }
+
+  #pull span:nth-child(4) {
+    top: 40px;
+  }
+
+  #pull span {
+    width: 29px;
+    left: 10px;
+  }
+
+  .calltoaction p {
+    width: 80%;
+    margin: 0 auto;
+    max-width: inherit;
+  }
+
+  .calltoaction {
+    height: 170px;
+  }
+
+  .derecha .bloquetexto,
+  .imagen {
+    float: none;
+    width: 90%;
+  }
+
+  .intro {
+    height: 350px;
+    margin-top: 0;
+  }
+
+  .filtro {
+    width: 438px;
+  }
+
+  .talent {
+    margin-top: 0;
+  }
+
+  .portfoliomin .centro a {
+    width: 100%;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .talent {
+    height: 300px;
+  }
+
+  .love .talent {
+    height: auto;
+  }
+
+  .love .introtext {
+    height: 280px;
+  }
+
+  .calltoaction p:first-child {
+    padding-top: 32px;
+  }
+
+  .portfoliomin .calltoaction p {
+    padding-top: 35px;
+  }
+
+  .brief,
+  .portfoliomin .calltoaction .brief {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 465px) {
+  .filtro {
+    width: 300px;
+  }
+
+  .filtro {
+    margin: 0 0 0 30px;
+  }
+
+  .bloquetexto,
+  .imagen {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  body {
+    max-width: 465px;
+  }
+}
+
+@media (max-width: 414px) {
+  .talent {
+    margin-top: 0;
+  }
+
+  .comentario {
+    margin: 30px 0;
+  }
+
+  .derecha .bloquetexto,
+  .imagen {
+    width: 90%;
+  }
+
+  .calltoaction p {
+    padding-top: 30px;
+  }
+
+  .introtext {
+    padding-top: 0;
+    height: calc(100vh - 0px);
+  }
+
+  .love .introtext {
+    height: 290px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .calltoaction p {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .calltoaction p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 370px) {
+  .filtro {
+    width: 280px;
+  }
+}
+
+@media (max-width: 346px) {
+  .portfoliomin .calltoaction {
+    height: 203px;
+  }
+}

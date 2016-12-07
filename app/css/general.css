@@ -438,8 +438,18 @@ footer {
 }
 
 .redes {
-  width: 406px;
+  width: 390px;
   margin: 0 auto
+}
+
+.redes:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.redes a {
+  display: block;
+  float: left;
 }
 .redes img {
   margin: 0 8px;

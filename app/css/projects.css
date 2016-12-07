@@ -99,32 +99,6 @@
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out
 }
-
-.botones3 p, .llamado, .mitadizquierda p, .nombre, .piecaja p, .profesion {
-  font-style: normal
-}
-.botones3 {
-  width: 185px;
-  height: 49px;
-  border-radius: 6px;
-  background-color: #2edad3;
-  box-shadow: 0 3px 12px 0 #04596a
-}
-.botones3 p {
-  width: 149.9px;
-  height: 27px;
-  font-family: Lato, arial;
-  font-size: 20px;
-  font-weight: 700!important;
-  font-stretch: normal;
-  line-height: .97;
-  text-align: center;
-  color: #fff;
-  padding: 15px
-}
-.botones3:hover {
-  background: #12C2BB
-}
 .bloquetexto .botones {
   margin-bottom: 0;
 }

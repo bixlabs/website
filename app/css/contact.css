@@ -1,7 +1,16 @@
+.page--contact .logocont {
+  background: url(../img/logoc.png) center center no-repeat;
+  background-size: 145px;
+}
+
+.page--contact nav a {
+  color: grey;
+}
+
 .contactback {
-  background: url(../img/fondoazul@2x.png) no-repeat center center;
+  background: none;
   background-size: cover;
-  height: 200px
+  height: 150px
 }
 .contenedor {
   width: 80%;

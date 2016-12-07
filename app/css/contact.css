@@ -242,103 +242,447 @@ select {
   display: none;
   margin-top: 12px;
 }
-#map-canvas {
-  margin-top: 5px;
-  height: 107px;
-  width: 50%;
-  position: absolute;
-  position: relative;
-  float: right;
-}
-.mapas.map1 {
-  margin-right: 3%;
-}
-.mapas.map2 {
-  margin-left: 3%;
-}
-.mapas {
-  margin: 30px 0;
-  float: left;
-  width: 47%;
-}
-.time {
-  width: 150px;
-  float: left;
-}
-.local-time {
-  text-transform: uppercase;
+
+/* -------------------------------------------- */
+/*
+/* -------------------------------------------- */
+
+.inputsgroup {
+  height: 50px;
 }
 
-#clock4, #clock3 {
-  float: right;
-  margin-left: 5px;
-}
-.dires {
-  float: right;
-  width: 100%;
-  text-align: right
-}
-.md-content p, .owl-theme .owl-controls, .phonenumber {
-  text-align: center
-}
-.dires p {
-  font-size: 16px;
-  margin: 5px 0
-}
-.office {
-  color: #2edad3
-}
-.phonedire {
-  color: #b5b5b5;
-  font-weight: 300
-}
-#map-canvas {
-  margin-top: 5px
-}
-.mapas {
-  margin: 30px 0;
-  float: left
-}
-#map-canvas2 {
-  height: 107px;
-  width: 50%;
-  float: right
+input {
+  -webkit-appearance: none!important;
 }
 
-.send:focus {
-  width: 134px!important;
-  height: 49px!important;
-  border-radius: 6px;
-  background-color: #2edad3!important;
-  box-shadow: 0 3px 5px 0 rgba(3, 88, 106, .14);
-  color: #fff!important;
-  float: right;
-  border-bottom: none!important;
-  font-weight: 400!important
+@media only screen and (max-width: 1095px) {
+  .introtext {
+    width: 90%;
+  }
+
+  .contactback .introtext {
+    height: 400px;
+  }
 }
-.phonenumber {
-  font-weight: 300;
-  font-size: 20px;
-  color: #0affc8;
-  height: 28px;
-  width: 515px;
-  margin: 10px auto 0
+
+@media only screen and (max-width: 1023px) {
+  .time {
+    float: left;
+  }
+
+  .dires {
+    text-align: left;
+    width: 100%;
+  }
+
+  .mapas {
+    margin: 30px 0 50px;
+    width: 205px;
+    width: 100%;
+  }
+
+  .contenedor {
+    width: 80%;
+    max-width: 533px;
+    margin: 50px auto;
+    height: 600px;
+  }
+
+  .phonedire {
+    width: 200px;
+  }
+
+  .f2 {
+    margin-left: 0;
+  }
+
+  .formulario {
+    padding-top: 10px;
+  }
+
+  #upload {
+    margin-top: 5px;
+  }
+
+  .mapas.map2 {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .mapas.map1 {
+    margin-right: 0;
+  }
+
+  .copyright {
+    float: none;
+    width: 100%;
+  }
+
+  footer {
+    height: 240px;
+  }
+
+  .mailto {
+    float: none;
+    line-height: 64px;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+  }
 }
-.phonenumber p {
-  float: left;
-  margin: 0 15px
+
+@media only screen and (max-width: 830px) {
+  .intro {
+    z-index: 0;
+  }
+
+  .fixed,
+  nav {
+    position: fixed;
+  }
+
+  html {
+    background: url(../img/polina.jpg) center center no-repeat fixed #000;
+  }
+
+  nav {
+    height: 70px;
+    width: 100%;
+    font-size: 11pt;
+    font-weight: 700;
+  }
+
+  .intro {
+    margin-top: 0;
+  }
+
+  .logocont {
+    background: url(../img/logo.png) center center no-repeat;
+  }
+
+  .menup {
+    margin-bottom: 13px;
+  }
+
+  .introtext {
+    height: 100%;
+  }
+
+  .fixed {
+    background: #fff;
+  }
+
+  nav a {
+    color: grey;
+  }
 }
-.column {
-  background: #002f44;
-  height: 3px
+
+@media only screen and (max-width: 790px) {
+  footer {
+    height: 100%;
+  }
+
+  .contenidofoot {
+    padding-top: 5px;
+  }
 }
-.opacity {
-  font-weight: 300!important
+
+@media only screen and (max-width: 768px) {
+  .intro {
+    height: 350px;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    background: #fff;
+  }
+
+  nav a {
+    color: grey;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .introtext {
+    height: 100%;
+  }
 }
-.infodire {
-  float: left;
-  text-align: left;
+
+@media only screen and (max-width: 740px) {
+  .talkcolor,
+  nav a {
+    text-align: left;
+    color: grey;
+  }
+
+  nav {
+    border-bottom: 0;
+  }
+
+  nav ul {
+    display: none;
+    height: auto;
+  }
+
+  .logocont {
+    background: url(../img/logo.png) center center no-repeat;
+  }
+
+  #pull,
+  #pull span {
+    display: block;
+    position: absolute;
+  }
+
+  .centradomenu,
+  .menup {
+    width: 100%!important;
+    background: #fff;
+  }
+
+  .centradomenu {
+    padding: 0;
+  }
+
+  .menup {
+    padding-left: 5%;
+  }
+
+  .menup {
+    border-bottom: 1px solid #2edad3;
+    margin-top: 0;
+  }
+
+  .menup li {
+    width: 100%;
+    margin: 0;
+    border-bottom: none;
+  }
+
+  #pull span {
+    height: 4px;
+    width: 40px;
+    background: #50e3c2;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  #pull span:nth-child(1) {
+    top: 19px;
+  }
+
+  #pull span:nth-child(2),
+  #pull span:nth-child(3) {
+    top: 29px;
+  }
+
+  #pull span:nth-child(4) {
+    top: 39px;
+  }
+
+  #pull {
+    width: 70px;
+    float: right;
+    right: 0;
+    height: 70px;
+    top: 0;
+  }
+
+  .talk img {
+    display: none;
+  }
+
+  nav a {
+    padding-left: 7%;
+    width: 100%;
+    text-align: left;
+  }
+
+  nav a {
+    float: none!important;
+    LINE-HEIGHT: 60PX;
+  }
+
+  .talk {
+    width: 100%!important;
+    height: 60px;
+    background: 0 0!important;
+    border-radius: 0;
+  }
+
+  .talkcolor {
+    margin: 0;
+    padding: 0 0 0 7%;
+    width: 100%;
+  }
+
+  .redes img {
+    margin: 0 5px;
+  }
+
+  .redes {
+    width: 371px;
+  }
 }
-.map2 .combotime {
-  margin-top: 26px;
+
+@media only screen and (max-width: 710px) {
+  body {
+    max-width: 710px;
+  }
+}
+
+@media (max-width: 630px) {
+  body {
+    max-width: 630px;
+  }
+
+  .dires,
+  .formulario {
+    width: 100%;
+  }
+
+  .dires {
+    text-align: left;
+  }
+}
+
+@media (max-width: 568px) {
+  #map-canvas2 {
+    margin-top: 5px;
+  }
+
+  nav li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+  .logocont {
+    width: 108px;
+    margin-top: 10px;
+    background-size: 108px!important;
+    height: 40px;
+  }
+
+  #pull {
+    height: 43px;
+  }
+
+  #pull span:nth-child(1) {
+    top: 20px;
+  }
+
+  #pull span:nth-child(2),
+  #pull span:nth-child(3) {
+    top: 30px;
+  }
+
+  #pull span:nth-child(4) {
+    top: 40px;
+  }
+
+  #pull span {
+    width: 29px;
+    left: 10px;
+  }
+
+  .intro {
+    height: 350px;
+    margin-top: 0;
+  }
+
+  section.intro.contactback {
+    height: 200px;
+  }
+
+  footer {
+    height: 100%;
+  }
+
+  .redes img {
+    margin: 5px;
+  }
+
+  .redes {
+    width: 247px;
+  }
+
+  .mailto {
+    margin-top: 117px;
+  }
+
+  #map-canvas,
+  .mapas {
+    width: 100%;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  #map-canvas {
+    height: 100px;
+  }
+
+  #map-canvas2 {
+    height: 100px!important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 465px) {
+  .redes {
+    width: 247px;
+  }
+
+  .dires,
+  .mapas {
+    width: 100%;
+  }
+
+  .dires {
+    float: none;
+  }
+
+  #map-canvas,
+  #map-canvas2 {
+    height: 100px;
+    width: 100%;
+  }
+
+  body {
+    max-width: 465px;
+  }
+}
+
+@media (max-width: 414px) {
+  .introtext {
+    padding-top: 0;
+    height: calc(100vh - 0px);
+  }
+
+  .contactback {
+    background: url(../img/fondoazul@2x.png) center center no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 370px) {
+  #drop p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .form-error span {
+    display: block;
+  }
 }

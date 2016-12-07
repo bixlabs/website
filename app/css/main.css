@@ -10,14 +10,105 @@
 	-webkit-animation-duration: 2s;
 	animation-duration: 2s
 }
+#map-canvas {
+  margin-top: 5px;
+  height: 107px;
+  width: 50%;
+  position: absolute;
+  position: relative;
+  float: right;
+}
+.mapas.map1 {
+  margin-right: 3%;
+}
+.mapas.map2 {
+  margin-left: 3%;
+}
+.mapas {
+  margin: 30px 0;
+  float: left;
+  width: 47%;
+}
+.time {
+  width: 150px;
+  float: left;
+}
+.local-time {
+  text-transform: uppercase;
+}
 
+#clock4, #clock3 {
+  float: right;
+  margin-left: 5px;
+}
+.dires {
+  float: right;
+  width: 100%;
+  text-align: right
+}
+.md-content p, .owl-theme .owl-controls, .phonenumber {
+  text-align: center
+}
+.dires p {
+  font-size: 16px;
+  margin: 5px 0
+}
+.office {
+  color: #2edad3
+}
+.phonedire {
+  color: #b5b5b5;
+  font-weight: 300
+}
+#map-canvas {
+  margin-top: 5px
+}
+.mapas {
+  margin: 30px 0;
+  float: left
+}
+#map-canvas2 {
+  height: 107px;
+  width: 50%;
+  float: right
+}
 
-
-/*contacto*/
-
-
-.inputsgroup {
-	height: 50px;
+.send:focus {
+  width: 134px!important;
+  height: 49px!important;
+  border-radius: 6px;
+  background-color: #2edad3!important;
+  box-shadow: 0 3px 5px 0 rgba(3, 88, 106, .14);
+  color: #fff!important;
+  float: right;
+  border-bottom: none!important;
+  font-weight: 400!important
+}
+.phonenumber {
+  font-weight: 300;
+  font-size: 20px;
+  color: #0affc8;
+  height: 28px;
+  width: 515px;
+  margin: 10px auto 0
+}
+.phonenumber p {
+  float: left;
+  margin: 0 15px
+}
+.column {
+  background: #002f44;
+  height: 3px
+}
+.opacity {
+  font-weight: 300!important
+}
+.infodire {
+  float: left;
+  text-align: left;
+}
+.map2 .combotime {
+  margin-top: 26px;
 }
 
 .barrita p span {

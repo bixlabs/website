@@ -1,6 +1,9 @@
 /*-------------------------------------------------------*/
 /* PROJECTS
 /*-------------------------------------------------------*/
+.page--projects .linkboton {
+  text-transform: uppercase;
+}
 
 .bloquetexto h2 {
   width: 90%;

@@ -217,9 +217,6 @@
   font-weight: normal!important;
 }
 
-.mathup {
-  margin-bottom: 0px!important;
-}
 
 @-moz-document url-prefix()  {
   .centroraro {
@@ -411,6 +408,23 @@
   nav a {
     color: grey;
   }
+  
+  
+  .imgpresentacion {
+    width: 100%;
+    margin-top: 170px;
+    float: right;
+    text-align: center;
+}
+.textopresentacion {
+    width: 100%!important;
+}
+.imgpresentacion {
+    width: 100%!important; 
+}
+.imgpresentacion { 
+    margin-top: 0!important; 
+}
 }
 
 @media only screen and (max-width: 768px) {

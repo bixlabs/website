@@ -18,6 +18,7 @@ body, p {
 .back p {
   max-width: 600px;
 }
+.activebutton{color: #50e3c2!important;}
 .intro {
   height: 500px;
   background: url(../img/header_about.jpg) center no-repeat fixed;

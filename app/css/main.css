@@ -1450,7 +1450,7 @@ video#bgvid2 {
 .logotexto img {
 	margin: 30px 0;
 	margin-top: 50px;
-	width: 200px;
+	width: 150px;
 	margin-top: 80px;
 }
 .details {
@@ -1545,7 +1545,7 @@ video#bgvid2 {
 	font-weight: bold;
 }
 .deetallecorto {
-	margin-top: 50px;
+	margin-top: 15px;
 	font-weight: lighter;
 	color: grey;
 	font-size: 19px;
@@ -1857,6 +1857,23 @@ video#bgvid {
 .derecha, .izquierda {
 	height: 550px
 }
+.stackimg {
+    width: 520px;    min-width: 400px;
+    height: 250px;
+    float: none;
+    margin: 0 auto;
+    display: block;
+}
+.textobox {
+    width: 520px;
+    float: none;
+    margin: 0 auto;display:block;
+    max-width: 487px;
+    margin-top: 50px;
+}
+.stackbox {
+    height: 550px;
+}
 }
 
 @media only screen and (max-width: 1023px) {
@@ -1926,6 +1943,9 @@ footer {
 }
 .upicon {
 	margin-top: -132px;
+}
+.groupinfo {
+    padding: 50px 30px;
 }
 }
 
@@ -2178,6 +2198,16 @@ footer {
 .deetallecorto {
 	margin-top: 0px;
 	font-size: 15px;
+}
+.col25 {
+    width: 50%; 
+}
+.unica{
+    width: 100%;
+    clear: both;
+}
+.techandtoolschry {
+    height: auto;
 }
 }
 
@@ -2586,7 +2616,7 @@ nav a:hover {
 @media (max-width: 680px) {
 }
 
-@media (max-width: 630px) {
+@media (max-width: 640px) {
  @-moz-document url-prefix() {
  .centroraro {
  height: 400px;
@@ -2669,6 +2699,24 @@ body {
 .conjuntopantallas img {
 	width: 45%;
 	margin: 20px 2%;
+}
+.stackimg .block {
+    width: 46%;
+}
+.stack .block img {
+    width: 83%;
+    display: block;
+    margin: 0 auto;
+}
+.stackbox {
+    height: 770px;
+}
+.textobox {
+    width: auto;
+}
+
+.stackimg {
+    height: 530px;width:auto;
 }
 }
 
@@ -2837,6 +2885,9 @@ nav {
 	height: 100px!important;
 	width: 100%
 }
+.stackimg {
+    height: auto;     min-width: auto;
+}
 }
 
 @media (max-width: 465px) {
@@ -3000,6 +3051,9 @@ body {
 }
 .how .howh1 {
 	font-size: 27px;
+}
+.col25 {
+    width: 100%; 
 }
 }
 

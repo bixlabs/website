@@ -1,0 +1,195 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+header,
+nav,
+section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  background-position: 0px 0px;
+  background-repeat: initial initial;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0px;
+}
+
+img {
+  border: 0px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+
+
+img {
+  vertical-align: middle;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-md-6,
+.col-sm-10,
+.col-sm-4,
+.col-sm-8,
+.col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-xs-12 {
+  float: left;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-sm-10,
+  .col-sm-4,
+  .col-sm-8 {
+    float: left;
+  }
+
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-6 {
+    float: left;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+}
+
+.clearfix::after,
+.clearfix::before,
+.container::after,
+.container::before,
+.row::after,
+.row::before {
+  content: ' ';
+  display: table;
+}
+
+.clearfix::after,
+.container::after,
+.row::after {
+  clear: both;
+}
+
+@font-face {
+  font-family: linea-basic-10;
+  src: url(../icon-fonts/linea-basic-10.eot?#iefix) format('embedded-opentype'), url(../icon-fonts/linea-basic-10.woff) format('woff'), url(../icon-fonts/linea-basic-10.ttf) format('truetype'), url(../icon-fonts/linea-basic-10.svg#linea-basic-10) format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-family: linea-basic-10 !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+}
+
+.icon-basic-eye::before {
+  content: H;
+}
+
+.icon-basic-keyboard::before {
+  content: '4';
+}
+
+.icon-basic-lightbulb::before {
+  content: '7';
+}
+
+.separator {
+  background: #00d9ec;
+}
+
+.separator-small {
+  background: #00d9ec;
+}

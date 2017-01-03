@@ -1,0 +1,33 @@
+{
+  "name": "bixlabs-website",
+  "description": "Bixlabs Website",
+  "version": "2.0.0",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.12.0",
+    "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-filerev": "^2.3.1",
+    "grunt-inline": "^0.3.6",
+    "grunt-usemin": "^3.0.0",
+    "grunt-wiredep": "^2.0.0",
+    "jshint-stylish": "^1.0.0"
+  },
+  "scripts": {
+    "grunt": "grunt",
+    "postinstall": "bower install",
+    "heroku": "./deploy-heroku.sh"
+  }
+}

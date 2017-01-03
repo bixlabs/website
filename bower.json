@@ -1,0 +1,14 @@
+{
+  "name": "bixlabs-website",
+  "description": "Bixlabs Website",
+  "homepage": "https://github.com/bixlabs/website",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

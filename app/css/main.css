@@ -1625,6 +1625,11 @@ a.website:hover {
 .conjuntopantallas img:hover {
 	box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.15);
 }
+.block:hover {
+    -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .22);
+    -moz-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .22);
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .15);
+}
 .col50 {
 	width: 50%;
 	float: left;

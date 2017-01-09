@@ -357,6 +357,6 @@ $(window).load(function(){
 });
 /* END ------------------------------------------------------- */
 
-$(window).load(function(){
+$(function() {
   $('.loader').delay(1000).fadeOut('slow');
 });

@@ -193,3 +193,32 @@ img {
 .separator-small {
   background: #00d9ec;
 }
+
+.menu-button {
+  display: block;
+  width: 25px;
+  height: 20px;
+  right: 10px;
+  position: absolute;
+  top: 30px;
+}
+
+@media (max-width: 992px) {
+  .menu-button {transform: translateY(-50%);}
+}
+@media (min-width: 768px) {
+  .menu-button {right: 20px;}
+}
+@media (min-width: 992px) {
+  .menu-button { right: 40px; }
+}
+
+.menu-button .before,
+.menu-button .main,
+.menu-button .after {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  margin-bottom: 5px;
+}

@@ -214,22 +214,6 @@ header {
 	.header-inner { padding: 30px 20px 10px 40px;background: transparent; }
 }
 
-/* Menu Button */
-.menu-button {
-	cursor: pointer;
-	display: block;
-	width: 25px;
-	height: 20px;
-	right: 20px;
-	position: absolute;
-}
-
-@media (max-width: 992px) {
-  .menu-button {
-    transform: translateY(-50%);
-  }
-}
-
 .menu-button .before, .menu-button .main, .menu-button .after {
 	display: block;
 	width: 25px;
@@ -289,10 +273,6 @@ header {
 		-ms-transform: translateY(0) rotate(-45deg);
 		 -o-transform: translateY(0) rotate(-45deg);
 			transform: translateY(0) rotate(-45deg);
-}
-
-@media (min-width: 992px) {
-	.menu-button { right: 40px; }
 }
 
 

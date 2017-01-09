@@ -194,36 +194,6 @@ header {
   .header-inner { padding: 30px 20px 10px 40px;background: transparent; }
 }
 
-.menu-button {
-  display: block;
-  width: 25px;
-  height: 20px;
-  right: 10px;
-  position: absolute;
-}
-
-@media (max-width: 992px) {
-  .menu-button {
-    transform: translateY(-50%);
-  }
-}
-
-.menu-button .before,
-.menu-button .main,
-.menu-button .after {
-  display: block;
-  width: 25px;
-  height: 2px;
-  background: #fff;
-  margin-bottom: 5px;
-}
-
-@media (min-width: 768px) {
-  .menu-button {
-    right: 20px;
-  }
-}
-
 .push-nav {
   display: block;
   vertical-align: middle;
@@ -554,4 +524,25 @@ a.button:before {
   .notification {
     padding: 15px 0px;
   }
+}
+.hero-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
 }

@@ -54,9 +54,9 @@ function initializeMaven() {
 				height: heroHeight+'px'
 			});
 
-			heroContent.css({
+			/*heroContent.css({
 				'margin-top' : topContentMargin+'px'
-			});
+			});*/
 
 			fullScreenContent.css({
 				'margin-top' : fullScreenContentMargin+'px'

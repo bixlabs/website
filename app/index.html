@@ -850,14 +850,6 @@
 
 		<!-- Begin Contact -->
 		<section id="section9" class="contact center">
-			<!-- Switch -->
-			<div class="switch dark">
-				<button class="radio">
-					<span class="elipse"></span>
-				</button>
-				<h5>Map</h5>
-			</div>
-
 			<!-- Contact Form -->
 			<div class="map-overlay padded dark">
 				<div class="container">
@@ -966,28 +958,5 @@
   <!-- build:js(app) js/main.js-->
   <script src="js/main.js"></script>
   <!-- endbuild -->
-  <!-- Map -->
-  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCVGiubXdq9Nl4A5WjgKTiEBthEmYh6OAI""></script>
-  <script type="text/javascript">
-    function initialize() {
-      var myLatlng = new google.maps.LatLng(-34.916028, -56.153515);
-      var mapOptions = {
-        zoom: 15,
-        scrollwheel: false,
-        center: myLatlng,
-        mapTypeId: google.maps.MapTypeId.HYBRID
-      }
-      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-      var marker = new google.maps.Marker({
-          position: myLatlng,
-          map: map,
-          title: 'Form'
-      });
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-    google.maps.event.addDomListener(window, 'resize', initialize);
-  </script>
 </body>
 </html>

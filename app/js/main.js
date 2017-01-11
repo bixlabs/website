@@ -264,27 +264,6 @@ function initializeMaven() {
 
 	});
 
-	//MAP
-	$('.radio').click(function (){
-		$(this).toggleClass('active');
-
-		if ($('.radio').hasClass('active')) {
-			$('.map-overlay').animate({
-				opacity: 0
-			}, 200);
-			$('#map').css({
-				'z-index' : 1
-			});
-		} else {
-			$('.map-overlay').animate({
-				opacity: 1
-			}, 200);
-			$('#map').css({
-				'z-index' : - 100
-			});
-		}
-	});
-
 	//SINGLE PROJECT RESIZINGS
 	(function() {
 		function devicesResizing(){
